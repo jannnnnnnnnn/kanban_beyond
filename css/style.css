@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box;
+}
 body {
   margin: 0;
   height: 100vh;
@@ -13,7 +16,7 @@ body > nav {
   grid-area: nav;
   background-color: #b8c0c2;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
   padding: 0 20px 0 30px;
 }
@@ -22,6 +25,7 @@ nav > a {
   text-decoration: none;
   padding: 10px;
   border-radius: 5px;
+  color: white;
 }
 
 nav > a:hover {
@@ -32,7 +36,10 @@ nav > a:hover {
 nav > a.active {
   color: white;
 }
-
+.navHelp {
+  float: right;
+  margin-right: 0;
+}
 /* main  */
 body > main {
   grid-area: main;
@@ -44,8 +51,26 @@ body > main {
   overflow-y: scroll;
 }
 
+/* boards */
 .boards {
   display: inline-block;
   border: 2px solid black;
-  flex-grow: 1;
+  margin: 5px;
+  min-width: 50px;
+  border-radius: 5px;
+}
+
+.addBorad {
+  background-color: gray;
+  opacity: 0.5;
+  max-height: 50px;
+}
+/* Tasks */
+.tasks,
+.boardsName {
+  display: block;
+  border: 2px solid black;
+  margin: 5px;
+  min-width: 50px;
+  border-radius: 5px;
 }
