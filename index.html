@@ -50,15 +50,12 @@
     </nav>
 
     <main>
-
       <!-- Todo -->
       <section
-
         class="boardsDiv"
         draggable="true"
         ondragstart="event.dataTransfer.setData('text/plain',null)"
       >
-
         <div class="boardDropzone" id="board1"></div>
         <div class="boards" id="board1">
           <div class="titleBoard">
@@ -84,7 +81,6 @@
             draggable="true"
             ondragstart="event.dataTransfer.setData('text/plain',null)"
           >
-
             <!-- this is where task content starts -->
             <div class="task" id="accordion">
               <div class="dropzone"></div>
@@ -113,16 +109,16 @@
                   <input type="text" />
                 </div>
               </div>
+              <div class="dropzone"></div>
             </div>
-            <!-- this is where task content ends -->
-            <button id="addTaskBtn1" onclick="addOneTask(this)">+</button>
           </div>
+          <!-- this is where task content ends -->
+          <button id="addTaskBtn1" onclick="addOneTask(this)">+</button>
+
           <!-- This is where tasks list end -->
         </div>
 
-
         <div class="boardDropzone" id="board1"></div>
-
       </section>
 
       <!-- IN progress -->
@@ -156,7 +152,6 @@
             ondragstart="event.dataTransfer.setData('text/plain',null)"
             class="tasksList"
           >
-
             <!-- this is where task content starts -->
             <div class="task" id="accordion">
               <div class="dropzone"></div>
@@ -187,9 +182,10 @@
               </div>
               <div class="dropzone"></div>
             </div>
-            <!-- this is where task content ends -->
-            <button id="addTaskBtn1" onclick="addOneTask(this)">+</button>
           </div>
+          <!-- this is where task content ends -->
+          <button id="addTaskBtn1" onclick="addOneTask(this)">+</button>
+
           <!-- This is where tasks list end -->
         </div>
 
@@ -257,9 +253,10 @@
               </div>
               <div class="dropzone"></div>
             </div>
-            <!-- this is where task content ends -->
-            <button id="addTaskBtn1" onclick="addOneTask(this)">+</button>
           </div>
+          <!-- this is where task content ends -->
+          <button id="addTaskBtn1" onclick="addOneTask(this)">+</button>
+
           <!-- This is where tasks list end -->
         </div>
 
