@@ -70,7 +70,16 @@ body > main {
 .boardsName {
   display: block;
   border: 2px solid black;
-  margin: 5px;
+  margin: 0 5px;
   min-width: 50px;
   border-radius: 5px;
+}
+
+.dropzone {
+  min-width: 200px;
+  min-height: 10px;
+  border: blue dashed 2px;
+  /* background: blueviolet; */
+  /* margin-bottom: 10px; */
+  /* padding: 10px; */
 }
