@@ -97,7 +97,7 @@
             <div class="dropzone"></div>
           </div>
           <div class="tasks" id="task2">task2</div>
-          <div class="tasks" id="task3">task3</div>
+
           <button id="addTaskBtn1">+</button>
         </section>
         <section class="boardDropzone" id="board1"></section>
@@ -116,23 +116,37 @@
             ondragstart="event.dataTransfer.setData('text/plain',null)"
           >
             <div class="dropzone"></div>
-            <div class="tasks">task4</div>
-            <div class="dropzone"></div>
-          </div>
-          <div
-            draggable="true"
-            ondragstart="event.dataTransfer.setData('text/plain',null)"
-          >
-            <div class="dropzone"></div>
-            <div class="tasks">task5</div>
-            <div class="dropzone"></div>
-          </div>
-          <div
-            draggable="true"
-            ondragstart="event.dataTransfer.setData('text/plain',null)"
-          >
-            <div class="dropzone"></div>
-            <div class="tasks">task6</div>
+
+            <div class="tasks" id="task1">task2</div>
+            <div id="accordion">
+              <div class="card">
+                <div class="card-header" id="headingTwo">
+                  <h5 class="mb-0">
+                    <button
+                      class="btn btn-link collapsed"
+                      data-toggle="collapse"
+                      data-target="#collapseTwo"
+                      aria-expanded="false"
+                      aria-controls="collapseTwo"
+                    >
+                      +
+                    </button>
+                    <input type="text" />
+                  </h5>
+                </div>
+                <div
+                  id="collapseTwo"
+                  class="collapse"
+                  aria-labelledby="headingTwo"
+                  data-parent="#accordion"
+                >
+                  <div class="card-body">
+                    <label>Detailed info</label>
+                    <input type="text" />
+                  </div>
+                </div>
+              </div>
+            </div>
             <div class="dropzone"></div>
           </div>
         </section>
@@ -147,13 +161,44 @@
         <section class="boardDropzone" id="board1"></section>
         <section class="boards" id="board3">
           <div class="boardsName">Done!</div>
-          <div class="dropzone"></div>
-          <div class="tasks">task1</div>
-          <div class="dropzone"></div>
-          <div class="tasks">task1</div>
-          <div class="dropzone"></div>
-          <div class="tasks">task1</div>
-          <div class="dropzone"></div>
+          <div
+            draggable="true"
+            ondragstart="event.dataTransfer.setData('text/plain',null)"
+          >
+            <div class="dropzone"></div>
+
+            <div class="tasks" id="task1">task3</div>
+            <div id="accordion">
+              <div class="card">
+                <div class="card-header" id="headingTwo">
+                  <h5 class="mb-0">
+                    <button
+                      class="btn btn-link collapsed"
+                      data-toggle="collapse"
+                      data-target="#collapseTwo"
+                      aria-expanded="false"
+                      aria-controls="collapseTwo"
+                    >
+                      +
+                    </button>
+                    <input type="text" />
+                  </h5>
+                </div>
+                <div
+                  id="collapseTwo"
+                  class="collapse"
+                  aria-labelledby="headingTwo"
+                  data-parent="#accordion"
+                >
+                  <div class="card-body">
+                    <label>Detailed info</label>
+                    <input type="text" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="dropzone"></div>
+          </div>
         </section>
         <section class="boardDropzone" id="board1"></section>
       </div>
