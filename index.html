@@ -50,28 +50,16 @@
     </nav>
 
     <main>
-      <section
+      <section id="board1"
         class="boardsDiv"
         draggable="true"
         ondragstart="event.dataTransfer.setData('text/plain',null)"
       >
-        <div class="boardDropzone" id="board1"></div>
-        <div class="boards" id="board1">
+        <div class="boardDropzone" ></div>
+        <div class="boards" >
           <div class="titleBoard">
             <h5 ondblclick="ShowElement(this)">title:</h5>
-            <button
-              class="btn btn-secondary dropdown-toggle"
-              type="button"
-              id="dropdownMenuButton"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-            ></button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <a class="dropdown-item" href="#">Something else here</a>
-            </div>
+            <button id="deleteBoard1">x</button>
           </div>
           <div
             class="taskDiv"
@@ -114,7 +102,7 @@
 
           <button id="addTaskBtn1">+</button>
         </div>
-        <div class="boardDropzone" id="board1"></div>
+        <div class="boardDropzone"></div>
       </section>
 
       <section
