@@ -1,7 +1,8 @@
 /*----- constants -----*/
 
 /*----- app's state (variables) -----*/
-let boardCounter = 4;
+//assuming 3 boards already exist onload
+let boardCounter = 3;
 
 /*----- cached element references -----*/
 const addBoardBtn = document.querySelector("#addBoardBtn");
@@ -15,6 +16,8 @@ addTaskBtn1.addEventListener("click", addTask);
 
 /*----- functions -----*/
 function addBoard() {
+  //count number of boards
+  boardCounter = boardCounter + 1;
   //creating div portion
   const div = document.createElement("div");
   div.style.width = "100px";
@@ -26,6 +29,7 @@ function addBoard() {
   //creating button portion
   const addTaskBtn = document.createElement("button");
   addTaskBtn.innerHTML = "+";
+  addTaskBtn.id = "addTaskBtn" + boardCounter;
   //creating section portion
   const newSection = document.createElement("Section");
   newSection.id = "board" + boardCounter;
