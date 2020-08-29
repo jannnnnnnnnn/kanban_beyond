@@ -68,24 +68,37 @@
         </div>
 
         <div class="tasks" id="task1">task1</div>
-          <div id="accordion">
-            <div class="card">
-              <div class="card-header" id="headingTwo">
-                <h5 class="mb-0">
-                  <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">+
-                  </button>
-                  <input type="text">
-                </h5>
-              </div>
-              <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-                <div class="card-body">
-                  <label>Detailed info</label>
-                  <input type="text">
-                </div>
+
+        <!-- task -->
+        <div id="accordion">
+          <div class="dropzone"></div>
+          <div>
+            <div class="card-head" id="headingTwo">
+              <div ondblclick="ShowElement(this)">Card Header</div>
+              <button
+                class="btn btn-link collapsed"
+                data-toggle="collapse"
+                data-target="#collapseTwo"
+                aria-expanded="false"
+                aria-controls="collapseTwo"
+              >
+                Detail:
+              </button>
+            </div>
+            <div
+              id="collapseTwo"
+              class="collapse"
+              aria-labelledby="headingTwo"
+              data-parent="#accordion"
+            >
+              <div class="card-body">
+                <p ondblclick="ShowElement(this)">Description</p>
               </div>
             </div>
           </div>
-        
+          <div class="dropzone"></div>
+        </div>
+
         <div class="tasks" id="task2">task2</div>
         <div class="tasks" id="task3">task3</div>
         <button id="addTaskBtn1">+</button>
