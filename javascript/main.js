@@ -7,7 +7,7 @@ let boardCounter = 4;
 const addBoardBtn = document.querySelector("#addBoardBtn");
 const mainSection = document.querySelector("main");
 const addTaskBtn1 = document.querySelector("#addTaskBtn1");
-const sectionDrop1 = document.querySelector("#drop1");
+const sectionBoard1 = document.querySelector("#board1");
 
 /*----- event listeners -----*/
 addBoardBtn.addEventListener("click", addBoard);
@@ -28,7 +28,7 @@ function addBoard() {
   addTaskBtn.innerHTML = "+";
   //creating section portion
   const newSection = document.createElement("Section");
-  newSection.id = "drop" + boardCounter;
+  newSection.id = "board" + boardCounter;
   //adding elements to the DOM
   div.appendChild(addTaskBtn);
   newSection.appendChild(div);
@@ -50,7 +50,7 @@ function addTask() {
   const input = document.createElement("input");
   input.type = "text";
   //adding elements to the DOM
-  sectionDrop1.appendChild(div);
+  sectionBoard1.appendChild(div);
   div.appendChild(form);
   form.appendChild(input);
 }
