@@ -6,6 +6,7 @@ body {
   height: 100vh;
   display: grid;
   grid-template-rows: 50px 1fr;
+  background-color: #e8eceb;
   grid-template-areas:
     "nav"
     "main";
@@ -14,7 +15,9 @@ body {
 /* header */
 body > nav {
   grid-area: nav;
-  background-color: #b8c0c2;
+  /* background-color: #b8c0c2; */
+  background-color: black;
+  opacity: 0.8;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -54,9 +57,11 @@ body > main {
 /* boards */
 .boards {
   display: inline-block;
-  border: 2px solid black;
-  margin: 5px;
+  /* border: 2px solid black; */
+  background-color: #c8cdd1;
+  /* margin: 5px; */
   min-width: 50px;
+  /* height: 300px; */
   border-radius: 5px;
 }
 
@@ -65,21 +70,40 @@ body > main {
   opacity: 0.5;
   max-height: 50px;
 }
+.boardsDiv {
+  display: flex;
+  flex-direction: row;
+}
+.boardDropzone {
+  min-width: 15px;
+  min-height: 300px;
+  /* border: green dashed 2px; */
+}
+.boardsName {
+  font-weight: bold;
+}
 /* Tasks */
 .tasks,
 .boardsName {
   display: block;
-  border: 2px solid black;
+  /* border: 2px solid black; */
   margin: 0 5px;
   min-width: 50px;
   border-radius: 5px;
 }
+.tasks {
+  background-color: white;
+}
 
 .dropzone {
   min-width: 200px;
-  min-height: 10px;
-  border: blue dashed 2px;
+  /* min-height: 10px; */
+  /* border: blue dashed 2px; */
   /* background: blueviolet; */
   /* margin-bottom: 10px; */
   /* padding: 10px; */
+}
+.tasks:hover {
+  /* background-color: ; */
+  opacity: 0.5;
 }

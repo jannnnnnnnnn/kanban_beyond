@@ -37,7 +37,8 @@
       src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/utils/Draggable.min.js"
     ></script>
     <script defer src="./javascript/main.js"></script>
-    <script defer src="./javascript/drag.js"></script>
+    <script defer src="./javascript/dragBoards.js"></script>
+    <script defer src="./javascript/dragTask.js"></script>
   </head>
   <body>
     <nav>
@@ -46,92 +47,161 @@
       >
       <a class="right-right" href="#">Help</a>
     </nav>
+
     <main>
-      <section class="boards" id="board1">
-        <div class="boardsName">To Do</div>
+      <div
+        class="boardsDiv"
+        draggable="true"
+        ondragstart="event.dataTransfer.setData('text/plain',null)"
+      >
+        <section class="boardDropzone" id="board1"></section>
+        <section class="boards" id="board1">
+          <div class="boardsName">To Do</div>
 
-        <div
-          draggable="true"
-          ondragstart="event.dataTransfer.setData('text/plain',null)"
-        >
-          <div class="dropzone"></div>
+          <div
+            draggable="true"
+            ondragstart="event.dataTransfer.setData('text/plain',null)"
+          >
+            <div class="dropzone"></div>
 
-          <div class="tasks" id="task1">task1</div>
-          <div id="accordion">
-            <div class="card">
-              <div class="card-header" id="headingTwo">
-                <h5 class="mb-0">
-                  <button
-                    class="btn btn-link collapsed"
-                    data-toggle="collapse"
-                    data-target="#collapseTwo"
-                    aria-expanded="false"
-                    aria-controls="collapseTwo"
-                  >
-                    +
-                  </button>
-                  <input type="text" />
-                </h5>
-              </div>
-              <div
-                id="collapseTwo"
-                class="collapse"
-                aria-labelledby="headingTwo"
-                data-parent="#accordion"
-              >
-                <div class="card-body">
-                  <label>Detailed info</label>
-                  <input type="text" />
+            <div class="tasks" id="task1">task1</div>
+            <div id="accordion">
+              <div class="card">
+                <div class="card-header" id="headingTwo">
+                  <h5 class="mb-0">
+                    <button
+                      class="btn btn-link collapsed"
+                      data-toggle="collapse"
+                      data-target="#collapseTwo"
+                      aria-expanded="false"
+                      aria-controls="collapseTwo"
+                    >
+                      +
+                    </button>
+                    <input type="text" />
+                  </h5>
+                </div>
+                <div
+                  id="collapseTwo"
+                  class="collapse"
+                  aria-labelledby="headingTwo"
+                  data-parent="#accordion"
+                >
+                  <div class="card-body">
+                    <label>Detailed info</label>
+                    <input type="text" />
+                  </div>
                 </div>
               </div>
             </div>
+            <div class="dropzone"></div>
           </div>
-          <div class="dropzone"></div>
-        </div>
-        <div class="tasks" id="task2">task2</div>
-        <div class="tasks" id="task3">task3</div>
-        <button id="addTaskBtn1">+</button>
-      </section>
+          <div class="tasks" id="task2">task2</div>
 
-      <section class="boards" id="board2">
-        <div class="boardsName">In Process</div>
-        <div
-          draggable="true"
-          ondragstart="event.dataTransfer.setData('text/plain',null)"
-        >
-          <div class="dropzone"></div>
-          <div class="tasks">task4</div>
-          <div class="dropzone"></div>
-        </div>
-        <div
-          draggable="true"
-          ondragstart="event.dataTransfer.setData('text/plain',null)"
-        >
-          <div class="dropzone"></div>
-          <div class="tasks">task5</div>
-          <div class="dropzone"></div>
-        </div>
-        <div
-          draggable="true"
-          ondragstart="event.dataTransfer.setData('text/plain',null)"
-        >
-          <div class="dropzone"></div>
-          <div class="tasks">task6</div>
-          <div class="dropzone"></div>
-        </div>
-      </section>
+          <button id="addTaskBtn1">+</button>
+        </section>
+        <section class="boardDropzone" id="board1"></section>
+      </div>
 
-      <section class="boards" id="board3">
-        <div class="boardsName">Done!</div>
-        <div class="dropzone"></div>
-        <div class="tasks">task1</div>
-        <div class="dropzone"></div>
-        <div class="tasks">task1</div>
-        <div class="dropzone"></div>
-        <div class="tasks">task1</div>
-        <div class="dropzone"></div>
-      </section>
+      <div
+        class="boardsDiv"
+        draggable="true"
+        ondragstart="event.dataTransfer.setData('text/plain',null)"
+      >
+        <section class="boardDropzone" id="board1"></section>
+        <section class="boards" id="board2">
+          <div class="boardsName">In Process</div>
+          <div
+            draggable="true"
+            ondragstart="event.dataTransfer.setData('text/plain',null)"
+          >
+            <div class="dropzone"></div>
 
+            <div class="tasks" id="task1">task2</div>
+            <div id="accordion">
+              <div class="card">
+                <div class="card-header" id="headingTwo">
+                  <h5 class="mb-0">
+                    <button
+                      class="btn btn-link collapsed"
+                      data-toggle="collapse"
+                      data-target="#collapseTwo"
+                      aria-expanded="false"
+                      aria-controls="collapseTwo"
+                    >
+                      +
+                    </button>
+                    <input type="text" />
+                  </h5>
+                </div>
+                <div
+                  id="collapseTwo"
+                  class="collapse"
+                  aria-labelledby="headingTwo"
+                  data-parent="#accordion"
+                >
+                  <div class="card-body">
+                    <label>Detailed info</label>
+                    <input type="text" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="dropzone"></div>
+          </div>
+        </section>
+        <section class="boardDropzone" id="board1"></section>
+      </div>
+
+      <div
+        class="boardsDiv"
+        draggable="true"
+        ondragstart="event.dataTransfer.setData('text/plain',null)"
+      >
+        <section class="boardDropzone" id="board1"></section>
+        <section class="boards" id="board3">
+          <div class="boardsName">Done!</div>
+          <div
+            draggable="true"
+            ondragstart="event.dataTransfer.setData('text/plain',null)"
+          >
+            <div class="dropzone"></div>
+
+            <div class="tasks" id="task1">task3</div>
+            <div id="accordion">
+              <div class="card">
+                <div class="card-header" id="headingTwo">
+                  <h5 class="mb-0">
+                    <button
+                      class="btn btn-link collapsed"
+                      data-toggle="collapse"
+                      data-target="#collapseTwo"
+                      aria-expanded="false"
+                      aria-controls="collapseTwo"
+                    >
+                      +
+                    </button>
+                    <input type="text" />
+                  </h5>
+                </div>
+                <div
+                  id="collapseTwo"
+                  class="collapse"
+                  aria-labelledby="headingTwo"
+                  data-parent="#accordion"
+                >
+                  <div class="card-body">
+                    <label>Detailed info</label>
+                    <input type="text" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="dropzone"></div>
+          </div>
+        </section>
+        <section class="boardDropzone" id="board1"></section>
+      </div>
       <section class="boards addBorad">
         <button id="addBoardBtn">Add +</button>
       </section>
