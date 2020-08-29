@@ -36,6 +36,9 @@ document.addEventListener(
 document.addEventListener(
   "dragenter",
   function (event) {
+    if (!draggedBoards.classList.contains("boardsDiv")) {
+      return;
+    }
     // highlight potential drop target when the draggable element enters it
     if (event.target.className == "boardDropzone") {
       event.target.style.background = "purple";
@@ -47,6 +50,9 @@ document.addEventListener(
 document.addEventListener(
   "dragleave",
   function (event) {
+    if (!draggedBoards.classList.contains("boardsDiv")) {
+      return;
+    }
     // reset background of potential drop target when the draggable element leaves it
     if (event.target.className == "boardDropzone") {
       event.target.style.background = "";
@@ -60,6 +66,9 @@ document.addEventListener(
   function (event) {
     // prevent default action (open as link for some elements)
     event.preventDefault();
+    if (!draggedBoards.classList.contains("boardsDiv")) {
+      return;
+    }
     // move dragged elem to the selected drop target
     if (event.target.className == "boardDropzone") {
       event.target.style.background = "";

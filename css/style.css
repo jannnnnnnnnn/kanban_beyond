@@ -58,6 +58,9 @@ body > main {
 h5 {
   display: inline-block;
 }
+.boardsDiv {
+  height: 200px;
+}
 .boards {
   display: inline-block;
   /* border: 2px solid black; */
@@ -100,9 +103,9 @@ h5 {
 
 .dropzone {
   min-width: 200px;
-  /* min-height: 10px; */
+  min-height: 10px;
   /* border: blue dashed 2px; */
-  /* background: blueviolet; */
+  background: blueviolet;
   /* margin-bottom: 10px; */
   /* padding: 10px; */
 }
