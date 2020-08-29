@@ -15,6 +15,7 @@ addBoardBtn.addEventListener("click", addBoard);
 addTaskBtn1.addEventListener("click", addTask);
 
 /*----- functions -----*/
+<<<<<<< HEAD
 function addBoard() {
   //count number of boards
   boardCounter = boardCounter + 1;
@@ -47,6 +48,8 @@ function addTask(element) {
 
   element.parentNode.insertBefore(newItem, element);
 }
+=======
+>>>>>>> 2517d340c2cb4f72b541bbc8eca44a185ba13489
 
 function ShowElement(element) {
   var oldhtml = element.innerHTML;

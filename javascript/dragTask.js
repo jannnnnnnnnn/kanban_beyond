@@ -47,6 +47,9 @@ document.addEventListener(
 document.addEventListener(
   "dragenter",
   function (event) {
+    if (!dragged.classList.contains("taskDiv")) {
+      return;
+    }
     // highlight potential drop target when the draggable element enters it
     if (event.target.className == "dropzone") {
       event.target.style.background = "purple";
@@ -59,6 +62,9 @@ document.addEventListener(
   "dragleave",
   function (event) {
     // reset background of potential drop target when the draggable element leaves it
+    if (!dragged.classList.contains("taskDiv")) {
+      return;
+    }
     if (event.target.className == "dropzone") {
       event.target.style.background = "";
     }
@@ -69,6 +75,9 @@ document.addEventListener(
 document.addEventListener(
   "drop",
   function (event) {
+    if (!dragged.classList.contains("taskDiv")) {
+      return;
+    }
     // prevent default action (open as link for some elements)
     event.preventDefault();
     // move dragged elem to the selected drop target
