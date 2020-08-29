@@ -72,28 +72,26 @@
         <!-- task -->
         <div id="accordion">
           <div class="dropzone"></div>
-          <div>
-            <div class="card-head" id="headingTwo">
-              <div ondblclick="ShowElement(this)">Card Header</div>
-              <button
-                class="btn btn-link collapsed"
-                data-toggle="collapse"
-                data-target="#collapseTwo"
-                aria-expanded="false"
-                aria-controls="collapseTwo"
-              >
-                Detail:
-              </button>
-            </div>
-            <div
-              id="collapseTwo"
-              class="collapse"
-              aria-labelledby="headingTwo"
-              data-parent="#accordion"
+          <div class="card-head" id="headingTwo">
+            <div ondblclick="ShowElement(this)">Card Header</div>
+            <button
+              class="btn btn-link collapsed"
+              data-toggle="collapse"
+              data-target="#collapseTwo"
+              aria-expanded="false"
+              aria-controls="collapseTwo"
             >
-              <div class="card-body">
-                <p ondblclick="ShowElement(this)">Description</p>
-              </div>
+              Detail:
+            </button>
+          </div>
+          <div
+            id="collapseTwo"
+            class="collapse"
+            aria-labelledby="headingTwo"
+            data-parent="#accordion"
+          >
+            <div class="card-body">
+              <p ondblclick="ShowElement(this)">Description</p>
             </div>
           </div>
           <div class="dropzone"></div>
