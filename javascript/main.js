@@ -15,41 +15,6 @@ addBoardBtn.addEventListener("click", addBoard);
 addTaskBtn1.addEventListener("click", addTask);
 
 /*----- functions -----*/
-<<<<<<< HEAD
-function addBoard() {
-  //count number of boards
-  boardCounter = boardCounter + 1;
-  //creating div portion
-  const div = document.createElement("div");
-  div.style.width = "100px";
-  div.style.height = "100px";
-  div.style.background = "grey";
-  div.style.color = "black";
-  div.innerHTML = "New Title";
-  div.id = "test";
-  //creating button portion
-  const addTaskBtn = document.createElement("button");
-  addTaskBtn.innerHTML = "+";
-  addTaskBtn.id = "addTaskBtn" + boardCounter;
-  //creating section portion
-  const newSection = document.createElement("Section");
-  newSection.id = "board" + boardCounter;
-  //adding elements to the DOM
-  div.appendChild(addTaskBtn);
-  newSection.appendChild(div);
-  mainSection.appendChild(newSection);
-}
-
-function addTask(element) {
-  console.log(element.parentNode);
-  var newItem = document.createElement("DIV");
-  newItem.innerHTML =
-    '<div class="tasks"><div class="dropzone"></div><div id="accordion"><div class="card"> <div class="card-header" id="headingTwo"><h5 class="mb-0"><button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">+</button><p ondblclick="ShowElement(this)">Task 1</p></h5></div><div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion"> <div class="card-body"> <label>Detailed info</label> <input type="text" /> </div> </div> </div> </div> <div class="dropzone"></div> </div>';
-
-  element.parentNode.insertBefore(newItem, element);
-}
-=======
->>>>>>> 2517d340c2cb4f72b541bbc8eca44a185ba13489
 
 function ShowElement(element) {
   var oldhtml = element.innerHTML;
@@ -63,4 +28,13 @@ function ShowElement(element) {
   element.appendChild(newobj);
   newobj.setSelectionRange(0, oldhtml.length);
   newobj.focus();
+}
+
+//add button must in the task list divison
+//onclick='addTask(this)'
+function addTask(element) {
+  var newobj = document.createElement("div");
+  newobj.innerHTML =
+    ' <div class="tasks"><div class="dropzone"></div><div id="accordion"><div class="card"><div class="card-header" id="headingTwo"><h5 class="mb-0"><button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">+</button><p ondblclick="ShowElement(this)">Task 1</p></h5></div><div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion"><div class="card-body"><label>Detailed info</label> <input type="text" /></div></div></div></div><div class="dropzone"></div></div>';
+  element.parentNode.insertBeofre(newobj, element);
 }
