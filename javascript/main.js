@@ -21,3 +21,12 @@ function ShowElement(element) {
   newobj.setSelectionRange(0, oldhtml.length);
   newobj.focus();
 }
+
+//add button must in the task list divison
+//onclick='addTask(this)'
+function addTask(element) {
+  var newobj = document.createElement("div");
+  newobj.innerHTML =
+    ' <div class="tasks"><div class="dropzone"></div><div id="accordion"><div class="card"><div class="card-header" id="headingTwo"><h5 class="mb-0"><button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">+</button><p ondblclick="ShowElement(this)">Task 1</p></h5></div><div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion"><div class="card-body"><label>Detailed info</label> <input type="text" /></div></div></div></div><div class="dropzone"></div></div>';
+  element.parentNode.insertBeofre(newobj, element);
+}
