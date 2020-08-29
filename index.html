@@ -48,7 +48,7 @@
     </nav>
     <main>
       <section class="boards" id="board1">
-        <div class="boardsName">To Do</div>
+        <div class="boardsName" ondblclick="ShowElement(this)">To Do</div>
         <div
           draggable="true"
           ondragstart="event.dataTransfer.setData('text/plain',null)"
@@ -72,27 +72,25 @@
         <!-- task -->
         <div id="accordion">
           <div class="dropzone"></div>
-          <div class="card-head" id="headingTwo">
-            <div ondblclick="ShowElement(this)">Card Header</div>
-            <button
-              class="btn btn-link collapsed"
-              data-toggle="collapse"
-              data-target="#collapseTwo"
-              aria-expanded="false"
-              aria-controls="collapseTwo"
-            >
-              Detail:
-            </button>
-          </div>
+
+          <div ondblclick="ShowElement(this)">Card Header</div>
+          <button
+            class="btn btn-link collapsed"
+            data-toggle="collapse"
+            data-target="#collapseTwo"
+            aria-expanded="false"
+            aria-controls="collapseTwo"
+          >
+            Detail:
+          </button>
           <div
             id="collapseTwo"
             class="collapse"
             aria-labelledby="headingTwo"
             data-parent="#accordion"
+            ondblclick="ShowElement(this)"
           >
-            <div class="card-body">
-              <p ondblclick="ShowElement(this)">Description</p>
-            </div>
+            Description
           </div>
           <div class="dropzone"></div>
         </div>
@@ -103,7 +101,7 @@
       </section>
 
       <section class="boards" id="board2">
-        <div class="boardsName">In Process</div>
+        <div class="boardsName" ondblclick="ShowElement(this)">In Process</div>
         <div
           draggable="true"
           ondragstart="event.dataTransfer.setData('text/plain',null)"
@@ -131,7 +129,7 @@
       </section>
 
       <section class="boards" id="board3">
-        <div class="boardsName">Done!</div>
+        <div class="boardsName" ondblclick="ShowElement(this)">Done!</div>
         <div class="dropzone"></div>
         <div class="tasks">task1</div>
         <div class="dropzone"></div>
