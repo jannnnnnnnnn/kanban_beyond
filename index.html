@@ -50,14 +50,33 @@
     </nav>
 
     <main>
-      <div
+      <section
         class="boardsDiv"
         draggable="true"
         ondragstart="event.dataTransfer.setData('text/plain',null)"
       >
-        <section class="boardDropzone" id="board1"></section>
-        <section class="boards" id="board1">
-          <div class="boardsName">To Do</div>
+        <div class="boardDropzone" id="board1"></div>
+        <div class="boards" id="board1">
+          <input
+            type="text"
+            value="Enter List Title"
+            readonly="true"
+            ondblclick="this.readOnly='';"
+            onblur="this.readOnly='true';"
+          />
+          <button
+            class="btn btn-secondary dropdown-toggle"
+            type="button"
+            id="dropdownMenuButton"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          ></button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
 
           <div
             draggable="true"
@@ -97,116 +116,52 @@
             </div>
             <div class="dropzone"></div>
           </div>
-          <div class="tasks" id="task2">task2</div>
 
           <button id="addTaskBtn1">+</button>
-        </section>
-        <section class="boardDropzone" id="board1"></section>
-      </div>
+        </div>
+        <div class="boardDropzone" id="board1"></div>
+      </section>
 
-      <div
+      <!-- <section
         class="boardsDiv"
         draggable="true"
         ondragstart="event.dataTransfer.setData('text/plain',null)"
       >
-        <section class="boardDropzone" id="board1"></section>
-        <section class="boards" id="board2">
+        <div class="boardDropzone" id="board1"></div>
+        <div class="boards" id="board2">
           <div class="boardsName">In Process</div>
-          <div
-            draggable="true"
-            ondragstart="event.dataTransfer.setData('text/plain',null)"
-          >
-            <div class="dropzone"></div>
+        </div>
+        <div class="boardDropzone" id="board1"></div>
+      </section>
 
-            <div class="tasks" id="task1">task2</div>
-            <div id="accordion">
-              <div class="card">
-                <div class="card-header" id="headingTwo">
-                  <h5 class="mb-0">
-                    <button
-                      class="btn btn-link collapsed"
-                      data-toggle="collapse"
-                      data-target="#collapseTwo"
-                      aria-expanded="false"
-                      aria-controls="collapseTwo"
-                    >
-                      +
-                    </button>
-                    <input type="text" />
-                  </h5>
-                </div>
-                <div
-                  id="collapseTwo"
-                  class="collapse"
-                  aria-labelledby="headingTwo"
-                  data-parent="#accordion"
-                >
-                  <div class="card-body">
-                    <label>Detailed info</label>
-                    <input type="text" />
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="dropzone"></div>
-          </div>
-        </section>
-        <section class="boardDropzone" id="board1"></section>
-      </div>
-
-      <div
+      <section
         class="boardsDiv"
         draggable="true"
         ondragstart="event.dataTransfer.setData('text/plain',null)"
       >
-        <section class="boardDropzone" id="board1"></section>
-        <section class="boards" id="board3">
+        <div class="boardDropzone" id="board1"></div>
+        <div class="boards" id="board2">
           <div class="boardsName">Done!</div>
-          <div
-            draggable="true"
-            ondragstart="event.dataTransfer.setData('text/plain',null)"
-          >
-            <div class="dropzone"></div>
-
-            <div class="tasks" id="task1">task3</div>
-            <div id="accordion">
-              <div class="card">
-                <div class="card-header" id="headingTwo">
-                  <h5 class="mb-0">
-                    <button
-                      class="btn btn-link collapsed"
-                      data-toggle="collapse"
-                      data-target="#collapseTwo"
-                      aria-expanded="false"
-                      aria-controls="collapseTwo"
-                    >
-                      +
-                    </button>
-                    <input type="text" />
-                  </h5>
-                </div>
-                <div
-                  id="collapseTwo"
-                  class="collapse"
-                  aria-labelledby="headingTwo"
-                  data-parent="#accordion"
-                >
-                  <div class="card-body">
-                    <label>Detailed info</label>
-                    <input type="text" />
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="dropzone"></div>
-          </div>
-        </section>
-        <section class="boardDropzone" id="board1"></section>
-      </div>
+        </div>
+        <div class="boardDropzone" id="board1"></div>
+      </section>
       <section class="boards" id="board3">
-        <div class="boardsName dropdown"><input type="text" value="Enter List Title" readonly="true" ondblclick="this.readOnly='';" onblur="this.readOnly='true';">
-          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          </button>
+        <div class="boardsName dropdown">
+          <input
+            type="text"
+            value="Enter List Title"
+            readonly="true"
+            ondblclick="this.readOnly='';"
+            onblur="this.readOnly='true';"
+          />
+          <button
+            class="btn btn-secondary dropdown-toggle"
+            type="button"
+            id="dropdownMenuButton"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          ></button>
           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
             <a class="dropdown-item" href="#">Action</a>
             <a class="dropdown-item" href="#">Another action</a>
@@ -220,7 +175,7 @@
         <div class="dropzone"></div>
         <div class="tasks">task1</div>
         <div class="dropzone"></div>
-      </section>
+      </section> -->
       <section class="boards addBorad">
         <button id="addBoardBtn">Add +</button>
       </section>
