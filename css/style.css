@@ -65,6 +65,10 @@ body > main {
   opacity: 0.5;
   max-height: 50px;
 }
+.boardsDiv {
+  display: flex;
+  flex-direction: row;
+}
 /* Tasks */
 .tasks,
 .boardsName {
