@@ -55,7 +55,7 @@ body > main {
 .boards {
   display: inline-block;
   border: 2px solid black;
-  margin: 5px;
+  /* margin: 5px; */
   min-width: 50px;
   border-radius: 5px;
 }
@@ -82,4 +82,9 @@ body > main {
   /* background: blueviolet; */
   /* margin-bottom: 10px; */
   /* padding: 10px; */
+}
+.boardDropzone {
+  min-width: 15px;
+  min-height: 300px;
+  border: green dashed 2px;
 }
