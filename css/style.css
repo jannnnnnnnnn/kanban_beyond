@@ -55,6 +55,9 @@ body > main {
 }
 
 /* boards */
+h5 {
+  display: inline-block;
+}
 .boards {
   display: inline-block;
   /* border: 2px solid black; */
