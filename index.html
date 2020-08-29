@@ -49,18 +49,6 @@
     </nav>
 
     <main>
-<<<<<<< HEAD
-      <section class="boards" id="board1">
-        <div class="boardsName" ondblclick="ShowElement(this)">To Do</div>
-        <div
-          draggable="true"
-          ondragstart="event.dataTransfer.setData('text/plain',null)"
-        >
-          <div class="dropzone"></div>
-          <div class="tasks">task1</div>
-          <div class="dropzone"></div>
-        </div>
-=======
       <div
         class="boardsDiv"
         draggable="true"
@@ -68,123 +56,49 @@
       >
         <section class="boardDropzone" id="board1"></section>
         <section class="boards" id="board1">
-          <div class="boardsName">To Do</div>
->>>>>>> b59be977a2da9b007cbfbb94f3cf06de6f91c99d
+          <div class="boardsName" ondblclick="ShowElement(this)">To Do</div>
 
           <div
             draggable="true"
             ondragstart="event.dataTransfer.setData('text/plain',null)"
+            class="tasksList"
           >
-            <div class="dropzone"></div>
+            <div class="tasks">
+              <div class="dropzone"></div>
 
-<<<<<<< HEAD
-        <div class="tasks" id="task1">task1</div>
-
-        <!-- task -->
-        <div id="accordion">
-          <div class="dropzone"></div>
-
-          <div ondblclick="ShowElement(this)">Card Header</div>
-          <button
-            class="btn btn-link collapsed"
-            data-toggle="collapse"
-            data-target="#collapseTwo"
-            aria-expanded="false"
-            aria-controls="collapseTwo"
-          >
-            Detail:
-          </button>
-          <div
-            id="collapseTwo"
-            class="collapse"
-            aria-labelledby="headingTwo"
-            data-parent="#accordion"
-            ondblclick="ShowElement(this)"
-          >
-            Description
-          </div>
-          <div class="dropzone"></div>
-        </div>
-
-        <div class="tasks" id="task2">task2</div>
-        <div class="tasks" id="task3">task3</div>
-        <button id="addTaskBtn1">+</button>
-      </section>
-
-      <section class="boards" id="board2">
-        <div class="boardsName" ondblclick="ShowElement(this)">In Process</div>
-        <div
-          draggable="true"
-          ondragstart="event.dataTransfer.setData('text/plain',null)"
-        >
-          <div class="dropzone"></div>
-          <div class="tasks">task4</div>
-          <div class="dropzone"></div>
-        </div>
-        <div
-          draggable="true"
-          ondragstart="event.dataTransfer.setData('text/plain',null)"
-        >
-          <div class="dropzone"></div>
-          <div class="tasks">task5</div>
-          <div class="dropzone"></div>
-        </div>
-        <div
-          draggable="true"
-          ondragstart="event.dataTransfer.setData('text/plain',null)"
-        >
-          <div class="dropzone"></div>
-          <div class="tasks">task6</div>
-          <div class="dropzone"></div>
-        </div>
-      </section>
-
-      <section class="boards" id="board3">
-        <div class="boardsName" ondblclick="ShowElement(this)">Done!</div>
-        <div class="dropzone"></div>
-        <div class="tasks">task1</div>
-        <div class="dropzone"></div>
-        <div class="tasks">task1</div>
-        <div class="dropzone"></div>
-        <div class="tasks">task1</div>
-        <div class="dropzone"></div>
-      </section>
-=======
-            <div class="tasks" id="task1">task1</div>
-            <div id="accordion">
-              <div class="card">
-                <div class="card-header" id="headingTwo">
-                  <h5 class="mb-0">
-                    <button
-                      class="btn btn-link collapsed"
-                      data-toggle="collapse"
-                      data-target="#collapseTwo"
-                      aria-expanded="false"
-                      aria-controls="collapseTwo"
-                    >
-                      +
-                    </button>
-                    <input type="text" />
-                  </h5>
-                </div>
-                <div
-                  id="collapseTwo"
-                  class="collapse"
-                  aria-labelledby="headingTwo"
-                  data-parent="#accordion"
-                >
-                  <div class="card-body">
-                    <label>Detailed info</label>
-                    <input type="text" />
+              <div id="accordion">
+                <div class="card">
+                  <div class="card-header" id="headingTwo">
+                    <h5 class="mb-0">
+                      <button
+                        class="btn btn-link collapsed"
+                        data-toggle="collapse"
+                        data-target="#collapseTwo"
+                        aria-expanded="false"
+                        aria-controls="collapseTwo"
+                      >
+                        +
+                      </button>
+                      <p ondblclick="ShowElement(this)">Task 1</p>
+                    </h5>
+                  </div>
+                  <div
+                    id="collapseTwo"
+                    class="collapse"
+                    aria-labelledby="headingTwo"
+                    data-parent="#accordion"
+                  >
+                    <div class="card-body">
+                      <label>Detailed info</label>
+                      <input type="text" />
+                    </div>
                   </div>
                 </div>
               </div>
+              <div class="dropzone"></div>
             </div>
-            <div class="dropzone"></div>
+            <button class="addTaskBtn" onclick="addTask(this)">+</button>
           </div>
-          <div class="tasks" id="task2">task2</div>
-
-          <button id="addTaskBtn1">+</button>
         </section>
         <section class="boardDropzone" id="board1"></section>
       </div>
@@ -202,7 +116,6 @@
             ondragstart="event.dataTransfer.setData('text/plain',null)"
           >
             <div class="dropzone"></div>
->>>>>>> b59be977a2da9b007cbfbb94f3cf06de6f91c99d
 
             <div class="tasks" id="task1">task2</div>
             <div id="accordion">

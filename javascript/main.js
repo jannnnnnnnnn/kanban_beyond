@@ -39,24 +39,13 @@ function addBoard() {
   mainSection.appendChild(newSection);
 }
 
-function addTask() {
-  //creating div portion
-  const div = document.createElement("div");
-  div.style.width = "100px";
-  div.style.height = "50px";
-  div.style.background = "grey";
-  div.style.color = "black";
-  div.innerHTML = "New Task";
-  div.id = "test";
-  //creating form portion
-  const form = document.createElement("form");
-  //creating input portion
-  const input = document.createElement("input");
-  input.type = "text";
-  //adding elements to the DOM
-  sectionBoard1.appendChild(div);
-  div.appendChild(form);
-  form.appendChild(input);
+function addTask(element) {
+  console.log(element.parentNode);
+  var newItem = document.createElement("DIV");
+  newItem.innerHTML =
+    '<div class="tasks"><div class="dropzone"></div><div id="accordion"><div class="card"> <div class="card-header" id="headingTwo"><h5 class="mb-0"><button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">+</button><p ondblclick="ShowElement(this)">Task 1</p></h5></div><div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion"> <div class="card-body"> <label>Detailed info</label> <input type="text" /> </div> </div> </div> </div> <div class="dropzone"></div> </div>';
+
+  element.parentNode.insertBefore(newItem, element);
 }
 
 function ShowElement(element) {
