@@ -1,3 +1,16 @@
+/*----- constants -----*/
+
+/*----- app's state (variables) -----*/
+//assuming 3 boards already exist onload
+let boardCounter = 3;
+
+/*----- cached element references -----*/
+const addBoardBtn = document.querySelector("#addBoardBtn");
+const mainSection = document.querySelector("main");
+
+/*----- event listeners -----*/
+addBoardBtn.addEventListener("click", addBoard);
+
 /*----- functions -----*/
 function addBoard() {
   //count number of boards
@@ -5,55 +18,46 @@ function addBoard() {
   //creating section portion
   const newSection = document.createElement("Section");
   newSection.id = "board" + boardCounter;
-  newSection.classList.add("boards");
-  //creating div portion
-  const div = document.createElement("div");
-  div.classList.add("boardsName");
-  //creating board title input portion
-  const input = document.createElement("input");
-  input.type = "text";
-  input.value = "Enter List Title";
-  input.readOnly = true;
-  input.ondblclick = () => {
-    input.readOnly = false;
+  newSection.classList.add("boardsDiv");
+  newSection.draggable = true;
+  newSection.ondragstart = () => {
+    event.dataTransfer.setData("text/plain", null);
   };
-  input.onblur = () => {
-    input.readOnly = true;
+  //creating dropzone section
+  const dropzoneDiv = document.createElement("div");
+  dropzoneDiv.classList.add("boardDropzone");
+  //creating board portion
+  const boardDiv = document.createElement("div");
+  boardDiv.classList.add("boards");
+  //creating board title div portion
+  const titleDiv = document.createElement("div");
+  titleDiv.classList.add("titleBoard");
+  //creating title portion
+  const title = document.createElement("h5");
+  title.innerHTML = "Enter List Title";
+  title.ondblclick = () => {
+    ShowElement(this);
   };
-  //creating dropdown menu portion
-  const dropdownBtn = docment.createElement("button");
+  //creating delete button
+  const deleteBtn = document.createElement("button");
+  deleteBtn.id = "deleteBoard" + boardCounter;
+  deleteBtn.innerHTML = "x";
   //creating add task button portion
   const addTaskBtn = document.createElement("button");
   addTaskBtn.innerHTML = "Add +";
   addTaskBtn.id = "addTaskBtn" + boardCounter;
+
   //adding elements to the DOM
   mainSection.appendChild(newSection);
-  newSection.appendChild(div);
-  div.appendChild(input);
-  div.appendChild();
-  newSection.appendChild(addTaskBtn);
+  newSection.appendChild(dropzoneDiv);
+  newSection.appendChild(boardDiv);
+  boardDiv.appendChild(titleDiv);
+  titleDiv.appendChild(title);
+  titleDiv.appendChild(deleteBtn);
+  boardDiv.appendChild(addTaskBtn);
+  newSection.appendChild(dropzoneDiv);
 }
 
 function removeBoard(evt) {
   boardCounter = boardCounter - 1;
-}
-
-function addTask() {
-  //creating div portion
-  const div = document.createElement("div");
-  div.style.width = "100px";
-  div.style.height = "50px";
-  div.style.background = "grey";
-  div.style.color = "black";
-  div.innerHTML = "New Task";
-  div.id = "test";
-  //creating form portion
-  const form = document.createElement("form");
-  //creating input portion
-  const input = document.createElement("input");
-  input.type = "text";
-  //adding elements to the DOM
-  sectionBoard1.appendChild(div);
-  div.appendChild(form);
-  form.appendChild(input);
 }
