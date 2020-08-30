@@ -60,6 +60,9 @@ h5 {
 }
 .boardsDiv {
   max-height: 200px;
+  display: flex;
+  flex-direction: row;
+  float: left;
 }
 .boards {
   display: inline-block;
@@ -76,10 +79,7 @@ h5 {
   opacity: 0.5;
   max-height: 50px;
 }
-.boardsDiv {
-  display: flex;
-  flex-direction: row;
-}
+
 .boardDropzone {
   min-width: 15px;
   min-height: 300px;
@@ -88,6 +88,12 @@ h5 {
 .boardsName {
   font-weight: bold;
 }
+
+#addBoardBtn {
+  max-height: 30px;
+  float: right;
+}
+
 /* Tasks */
 .tasks,
 .boardsName {
