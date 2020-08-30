@@ -15,7 +15,10 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
     />
-    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
+    <link
+      href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"
+      rel="stylesheet"
+    />
 
     <link rel="stylesheet" href="./css/style.css" />
     <script
@@ -28,17 +31,22 @@
       integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
       crossorigin="anonymous"
     ></script>
-    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap"
+      rel="stylesheet"
+    />
     <script
       src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"
     ></script>
+    <script src="./javascript/ctxmenu.min/ctxmenu.min.js"></script>
     <script defer src="./javascript/main.js"></script>
     <script defer src="./javascript/dragBoards.js"></script>
     <script defer src="./javascript/dragTask.js"></script>
     <!-- <script defer src="./javascript/boards.js"></script> -->
     <script defer src="./javascript/help.js"></script>
+    <script defer src="./javascript/contexmenu.js"></script>
   </head>
   <body>
     <nav>
@@ -54,25 +62,25 @@
       </div>
     </nav>
 
-    <main  class="bg">
+    <main class="bg">
       <!-- Todo -->
-      <section id="board1"
+      <section
+        id="board1"
         class="boardsDiv"
         draggable="true"
         ondragstart="event.dataTransfer.setData('text/plain',null)"
       >
-        <div class="boardDropzone" ></div>
+        <div class="boardDropzone"></div>
         <div class="boards">
           <div class="titleBoard addBorder">
             <div></div>
             <h5 class="help title" ondblclick="ShowElement(this)">
-              To do: <span class="tooltipText">Tooltip text</span>
+              To do:
+              <span class="tooltipText">Tooltip text</span>
             </h5>
             <button class="btn btn-link" type="button">
               <i class="material-icons md-15">delete_outline</i>
-
             </button>
-            
           </div>
           <!-- This is tasks list -->
 
@@ -87,21 +95,25 @@
               <div class="card-header" id="headingOne">
                 <h5 class="mb-0 collapseTitle">
                   <button
-                    class="btn  collapsed"
+                    class="btn collapsed"
                     data-toggle="collapse"
                     data-target="#collapseOne"
                     aria-expanded="false"
                     aria-controls="collapseOne"
                   >
-                  <i class="material-icons md-15">keyboard_arrow_down</i> 
+                    <i class="material-icons md-15">keyboard_arrow_down</i>
                   </button>
-                  <p class="taskText" ondblclick="ShowElement(this)" >Enter Task</p>
+                  <p class="taskText" ondblclick="ShowElement(this)">
+                    Enter Task
+                  </p>
                   <div class="w-100">
                     <div class="progress">
-                      <div class="progress-bar progress-bar-striped bg-warning" style="width:30%"></div>
+                      <div
+                        class="progress-bar progress-bar-striped bg-warning"
+                        style="width: 30%"
+                      ></div>
                     </div>
                   </div>
-                  
                 </h5>
               </div>
               <div
@@ -112,18 +124,24 @@
               >
                 <div class="card-body">
                   <label>Detailed info</label>
-                  <input type="text" class="form-control"/>
+                  <input type="text" class="form-control" />
                   <label>Deadline</label>
-                  <input type="date" class="form-control"/>
+                  <input type="date" class="form-control" />
                   <label>Duration (Days)</label>
-                  <input type="number" class="form-control"/>
+                  <input type="number" class="form-control" />
                 </div>
               </div>
               <div class="dropzone"></div>
             </div>
           </div>
           <!-- this is where task content ends -->
-          <button type="button" class="btn btn-outline-secondary w-100"  onclick="addOneTask(this)">Add Task +</button>
+          <button
+            type="button"
+            class="btn btn-outline-secondary w-100"
+            onclick="addOneTask(this)"
+          >
+            Add Task +
+          </button>
 
           <!-- This is where tasks list end -->
         </div>
@@ -132,20 +150,21 @@
       </section>
 
       <!-- IN progress -->
-      <section id="board2"
+      <section
+        id="board2"
         class="boardsDiv"
         draggable="true"
         ondragstart="event.dataTransfer.setData('text/plain',null)"
       >
-        <div class="boardDropzone" ></div>
-        <div class="boards" >
+        <div class="boardDropzone"></div>
+        <div class="boards">
           <div class="titleBoard addBorder">
             <div></div>
             <h5 class="help title" ondblclick="ShowElement(this)">
               In progress: <span class="tooltipText">Tooltip text</span>
             </h5>
             <button class="btn btn-link" type="button">
-              <i class="material-icons  md-15">delete_outline</i>
+              <i class="material-icons md-15">delete_outline</i>
             </button>
           </div>
           <!-- This is tasks list -->
@@ -167,13 +186,17 @@
                     aria-expanded="false"
                     aria-controls="collapseTwo"
                   >
-                  <i class="material-icons md-15">keyboard_arrow_down</i> 
-
+                    <i class="material-icons md-15">keyboard_arrow_down</i>
                   </button>
-                  <p class="taskText" ondblclick="ShowElement(this)" >Enter Task</p>
+                  <p class="taskText" ondblclick="ShowElement(this)">
+                    Enter Task
+                  </p>
                   <div class="w-100">
                     <div class="progress">
-                      <div class="progress-bar progress-bar-striped bg-success" style="width:60%"></div>
+                      <div
+                        class="progress-bar progress-bar-striped bg-success"
+                        style="width: 60%"
+                      ></div>
                     </div>
                   </div>
                 </h5>
@@ -193,7 +216,14 @@
             </div>
           </div>
           <!-- this is where task content ends -->
-          <button id="addTaskBtn2" type="button" class="btn btn-outline-secondary w-100"  onclick="addOneTask(this)">Add Task +</button>
+          <button
+            id="addTaskBtn2"
+            type="button"
+            class="btn btn-outline-secondary w-100"
+            onclick="addOneTask(this)"
+          >
+            Add Task +
+          </button>
 
           <!-- This is where tasks list end -->
         </div>
@@ -202,12 +232,13 @@
       </section>
 
       <!-- Done -->
-      <section id="board3"
+      <section
+        id="board3"
         class="boardsDiv"
         draggable="true"
         ondragstart="event.dataTransfer.setData('text/plain',null)"
       >
-        <div class="boardDropzone" ></div>
+        <div class="boardDropzone"></div>
         <div class="boards">
           <div class="titleBoard addBorder">
             <div></div>
@@ -235,13 +266,17 @@
                     aria-expanded="false"
                     aria-controls="collapseThree"
                   >
-                  <i class="material-icons md-15">keyboard_arrow_down</i>
-
+                    <i class="material-icons md-15">keyboard_arrow_down</i>
                   </button>
-                  <p class="taskText" ondblclick="ShowElement(this)" >Enter Task</p>
+                  <p class="taskText" ondblclick="ShowElement(this)">
+                    Enter Task
+                  </p>
                   <div class="w-100">
                     <div class="progress">
-                      <div class="progress-bar progress-bar-striped bg-success" style="width:100%"></div>
+                      <div
+                        class="progress-bar progress-bar-striped bg-success"
+                        style="width: 100%"
+                      ></div>
                     </div>
                   </div>
                 </h5>
@@ -261,16 +296,42 @@
             </div>
           </div>
           <!-- this is where task content ends -->
-          <button type="button" class="btn btn-outline-secondary w-100" id="addTaskBtn3" onclick="addOneTask(this)">Add Task +</button>
+          <button
+            type="button"
+            class="btn btn-outline-secondary w-100"
+            id="addTaskBtn3"
+            onclick="addOneTask(this)"
+          >
+            Add Task +
+          </button>
 
           <!-- This is where tasks list end -->
         </div>
 
-        <div class="boardDropzone" ></div>
+        <div class="boardDropzone"></div>
       </section>
       <section>
-          <button type="button" class="btn btn-outline-dark" id="addBoardBtn" onclick=addBoard()>New List + </button>
+        <button
+          type="button"
+          class="btn btn-outline-dark"
+          id="addBoardBtn"
+          onclick="addBoard()"
+        >
+          New List +
+        </button>
       </section>
+      <!-- <section class="boardsDiv">
+        <div class="boards"> -->
+      <button
+        type="button"
+        class="btn btn-outline-dark"
+        id="addBoardBtn"
+        onclick="addBoard()"
+      >
+        New List +
+      </button>
+      <!-- </div>
+      </section> -->
     </main>
   </body>
 </html>
