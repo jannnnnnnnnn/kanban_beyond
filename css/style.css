@@ -16,7 +16,7 @@ body {
 body > nav {
   grid-area: nav;
   /* background-color: #b8c0c2; */
-  background-color: black;
+  background-color: #8fcfd1;
   opacity: 0.8;
   display: flex;
   justify-content: space-between;
@@ -67,10 +67,12 @@ h5 {
 .boards {
   display: inline-block;
   /* border: 2px solid black; */
-  background-color: #c8cdd1;
+  background-color: #f6ab6c;
   /* margin: 5px; */
   min-width: 50px;
   /* height: 300px; */
+  max-width: 200px;
+
   border-radius: 5px;
 }
 
@@ -103,15 +105,18 @@ h5 {
   min-width: 50px;
   border-radius: 5px;
 }
-.tasks {
-  background-color: white;
+.addBorder {
+  /* background-color: white; */
+  border-radius: 2px;
+  border-color: #f6efa6;
+  border-style: solid;
 }
 
 .dropzone {
   min-width: 200px;
   min-height: 10px;
   /* border: blue dashed 2px; */
-  background: blueviolet;
+  /* background: blueviolet; */
   /* margin-bottom: 10px; */
   /* padding: 10px; */
 }
@@ -208,6 +213,7 @@ input:checked + .slider:before {
 
 .collapseTitle {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .titleBoard {
@@ -221,4 +227,31 @@ input:checked + .slider:before {
   font-size: x-large;
 }
 
-/* context menu */
+.taskText {
+  min-width: 140px;
+  border: 1px dotted grey;
+}
+
+.md-15 {
+  font-size: 15px;
+}
+
+.bg {
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background: rgba(246, 239, 166, 0.3);
+}
+
+.bg::after {
+  content: "";
+  background: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/6cb3a910-a3af-4d5a-8a65-f5f2c0672573/d4f8ej9-04879e6a-bbc9-4cc6-8364-6edfe1a4143c.jpg/v1/fill/w_1280,h_960,q_75,strp/cork_board_texture_12_by_carlbert_d4f8ej9-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3siaGVpZ2h0IjoiPD05NjAiLCJwYXRoIjoiXC9mXC82Y2IzYTkxMC1hM2FmLTRkNWEtOGE2NS1mNWYyYzA2NzI1NzNcL2Q0ZjhlajktMDQ4NzllNmEtYmJjOS00Y2M2LTgzNjQtNmVkZmUxYTQxNDNjLmpwZyIsIndpZHRoIjoiPD0xMjgwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.N_BheyPikOSHH-5nferIoz2QVYJkbDvIxURkiu12LDU");
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
