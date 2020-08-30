@@ -44,6 +44,9 @@ nav > a.active {
   float: right;
   margin-right: 0;
 }
+.right-right {
+  color: white;
+}
 /* main  */
 body > main {
   grid-area: main;
@@ -125,6 +128,8 @@ h5 {
   /* background-color: ; */
   opacity: 0.5;
 }
+
+/* scrolling */
 
 /* help on off switch */
 .switch {
