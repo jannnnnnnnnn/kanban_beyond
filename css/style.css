@@ -60,9 +60,9 @@ h5 {
 }
 .boardsDiv {
   max-height: 200px;
-  display: flex;
+  /* display: flex;
   flex-direction: row;
-  float: left;
+  float: left; */
 }
 .boards {
   display: inline-block;
