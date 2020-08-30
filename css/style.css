@@ -3,6 +3,7 @@
 }
 body {
   margin: 0;
+  background: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/6cb3a910-a3af-4d5a-8a65-f5f2c0672573/d4f8ej9-04879e6a-bbc9-4cc6-8364-6edfe1a4143c.jpg/v1/fill/w_1280,h_960,q_75,strp/cork_board_texture_12_by_carlbert_d4f8ej9-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3siaGVpZ2h0IjoiPD05NjAiLCJwYXRoIjoiXC9mXC82Y2IzYTkxMC1hM2FmLTRkNWEtOGE2NS1mNWYyYzA2NzI1NzNcL2Q0ZjhlajktMDQ4NzllNmEtYmJjOS00Y2M2LTgzNjQtNmVkZmUxYTQxNDNjLmpwZyIsIndpZHRoIjoiPD0xMjgwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.N_BheyPikOSHH-5nferIoz2QVYJkbDvIxURkiu12LDU");
   height: 100vh;
   display: grid;
   grid-template-rows: 50px 1fr;
@@ -59,7 +60,10 @@ h5 {
   display: inline-block;
 }
 .boardsDiv {
-  min-height: 200px;
+  max-height: 200px;
+  display: flex;
+  flex-direction: row;
+  float: left;
 }
 .boards {
   display: inline-block;
@@ -243,7 +247,7 @@ input:checked + .slider:before {
 
 .bg::after {
   content: "";
-  background: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/6cb3a910-a3af-4d5a-8a65-f5f2c0672573/d4f8ej9-04879e6a-bbc9-4cc6-8364-6edfe1a4143c.jpg/v1/fill/w_1280,h_960,q_75,strp/cork_board_texture_12_by_carlbert_d4f8ej9-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3siaGVpZ2h0IjoiPD05NjAiLCJwYXRoIjoiXC9mXC82Y2IzYTkxMC1hM2FmLTRkNWEtOGE2NS1mNWYyYzA2NzI1NzNcL2Q0ZjhlajktMDQ4NzllNmEtYmJjOS00Y2M2LTgzNjQtNmVkZmUxYTQxNDNjLmpwZyIsIndpZHRoIjoiPD0xMjgwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.N_BheyPikOSHH-5nferIoz2QVYJkbDvIxURkiu12LDU");
+  /* background: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/6cb3a910-a3af-4d5a-8a65-f5f2c0672573/d4f8ej9-04879e6a-bbc9-4cc6-8364-6edfe1a4143c.jpg/v1/fill/w_1280,h_960,q_75,strp/cork_board_texture_12_by_carlbert_d4f8ej9-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3siaGVpZ2h0IjoiPD05NjAiLCJwYXRoIjoiXC9mXC82Y2IzYTkxMC1hM2FmLTRkNWEtOGE2NS1mNWYyYzA2NzI1NzNcL2Q0ZjhlajktMDQ4NzllNmEtYmJjOS00Y2M2LTgzNjQtNmVkZmUxYTQxNDNjLmpwZyIsIndpZHRoIjoiPD0xMjgwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.N_BheyPikOSHH-5nferIoz2QVYJkbDvIxURkiu12LDU"); */
   opacity: 0.5;
   top: 0;
   left: 0;
@@ -251,4 +255,8 @@ input:checked + .slider:before {
   right: 0;
   position: absolute;
   z-index: -1;
+}
+.backgroundBtn {
+  align-self: flex-end;
+  height: 30px;
 }
