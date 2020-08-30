@@ -100,3 +100,10 @@ taskDiv.forEach((t) => {
     sort: true,
   });
 });
+
+var main = document.querySelector("main");
+
+Sortable.create(main, {
+  group: "sorting",
+  sort: true,
+});
