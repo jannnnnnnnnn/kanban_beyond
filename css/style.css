@@ -59,7 +59,10 @@ h5 {
   display: inline-block;
 }
 .boardsDiv {
-  min-height: 200px;
+  max-height: 200px;
+  display: flex;
+  flex-direction: row;
+  float: left;
 }
 .boards {
   display: inline-block;
