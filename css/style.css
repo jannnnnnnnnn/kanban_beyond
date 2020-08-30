@@ -256,3 +256,7 @@ input:checked + .slider:before {
   position: absolute;
   z-index: -1;
 }
+.backgroundBtn {
+  align-self: flex-end;
+  height: 30px;
+}
