@@ -101,7 +101,7 @@ taskDiv.forEach((t) => {
   });
 });
 
-var main = document.querySelector("main");
+var main = document.querySelector(".boardsList");
 
 Sortable.create(main, {
   group: "sorting",
