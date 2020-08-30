@@ -199,3 +199,18 @@ input:checked + .slider:before {
 .tooltipText {
   display: none;
 }
+
+.collapseTitle {
+  display: flex;
+}
+
+.titleBoard {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.title {
+  font-family: "Kaushan Script", cursive;
+  font-size: x-large;
+}
