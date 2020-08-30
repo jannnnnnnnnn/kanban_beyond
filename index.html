@@ -40,11 +40,13 @@
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"
     ></script>
+    <script src="./javascript/ctxmenu.min/ctxmenu.min.js"></script>
     <script defer src="./javascript/main.js"></script>
     <script defer src="./javascript/dragBoards.js"></script>
     <script defer src="./javascript/dragTask.js"></script>
     <!-- <script defer src="./javascript/boards.js"></script> -->
     <script defer src="./javascript/help.js"></script>
+    <script defer src="./javascript/contexmenu.js"></script>
   </head>
   <body>
     <nav>
@@ -72,7 +74,8 @@
         <div class="boards">
           <div class="titleBoard">
             <h5 class="help title" ondblclick="ShowElement(this)">
-              To do: <span class="tooltipText">Tooltip text</span>
+              To do:
+              <span class="tooltipText">Tooltip text</span>
             </h5>
             <button class="btn btn-outline-secondary boardMenu" type="button">
               <i class="material-icons">delete_outline</i>
@@ -83,6 +86,7 @@
           <div
             class="taskDiv"
             draggable="true"
+            id="ContextMenu"
             ondragstart="event.dataTransfer.setData('text/plain',null)"
           >
             <!-- this is where task content starts -->

@@ -220,3 +220,5 @@ input:checked + .slider:before {
   font-family: "Kaushan Script", cursive;
   font-size: x-large;
 }
+
+/* context menu */
