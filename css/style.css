@@ -44,6 +44,9 @@ nav > a.active {
   float: right;
   margin-right: 0;
 }
+.right-right {
+  color: white;
+}
 /* main  */
 body > main {
   grid-area: main;
