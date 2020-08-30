@@ -1,4 +1,4 @@
-var contextMenu = CtxMenu("#ContextMenu");
+var contextMenu = CtxMenu(".taskDiv");
 contextMenu.addItem("Move", moveBoard);
 function moveBoard(e) {
   a = prompt("write the name of the column you want this column be next to:");
