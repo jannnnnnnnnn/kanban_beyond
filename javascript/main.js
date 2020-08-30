@@ -92,3 +92,11 @@ function deleteBoard(evt) {
   alert("Are you sure you want to delete" + evt);
   console.log(evt);
 }
+
+var taskDiv = document.querySelectorAll(".taskDiv");
+taskDiv.forEach((t) => {
+  Sortable.create(t, {
+    group: "sorting",
+    sort: true,
+  });
+});
