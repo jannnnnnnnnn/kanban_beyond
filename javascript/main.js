@@ -1,6 +1,7 @@
 /*----- constants -----*/
 
 /*----- app's state (variables) -----*/
+let boardCounter = 3;
 
 /*----- cached element references -----*/
 
@@ -32,11 +33,10 @@ function addOneTask(element) {
   element.parentNode.insertBefore(newobj, element);
 }
 
-function deleteBoard() {}
 function addBoard() {
   const mainSection = document.querySelector("main");
   //count number of boards
-  boardCounter = 4;
+  boardCounter = boardCounter + 1;
   //creating section portion
   const newSection = document.createElement("Section");
   newSection.id = "board" + boardCounter;
@@ -56,16 +56,24 @@ function addBoard() {
   titleDiv.classList.add("titleBoard");
   //creating title portion
   const title = document.createElement("h5");
-  title.innerHTML = "Enter List Title";
+  title.classList.add("help", "title");
+  title.innerHTML =
+    'Enter List Title<span class="tooltipText">Tooltip text</span>';
   title.ondblclick = () => {
     ShowElement(this);
   };
   //creating delete button
   const deleteBtn = document.createElement("button");
   deleteBtn.id = "deleteBoard" + boardCounter;
-  deleteBtn.innerHTML = "x";
+  deleteBtn.classList.add("btn", "btn-outline-secondary", "boardMenu");
+  deleteBtn.type = "button";
+  deleteBtn.innerHTML = '<i class="material-icons">delete_outline</i>';
   //creating add task button portion
   const addTaskBtn = document.createElement("button");
+  addTaskBtn.classList.add("btn", "btn-outline-secondary", "w-100");
+  addTaskBtn.onclick = () => {
+    addOneTask(this);
+  };
   addTaskBtn.innerHTML = "Add +";
   addTaskBtn.id = "addTaskBtn" + boardCounter;
 
@@ -80,6 +88,7 @@ function addBoard() {
   newSection.appendChild(dropzoneDiv);
 }
 
-function removeBoard(evt) {
+function deleteBoard(evt) {
   alert("Are you sure you want to delete" + evt);
+  console.log(evt);
 }
