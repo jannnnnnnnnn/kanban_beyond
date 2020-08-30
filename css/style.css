@@ -51,7 +51,7 @@ body > main {
   align-items: left;
   background-color: #e8eceb;
   padding: 20px;
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
 }
 
 /* boards */
@@ -59,7 +59,7 @@ h5 {
   display: inline-block;
 }
 .boardsDiv {
-  height: 200px;
+  max-height: 200px;
 }
 .boards {
   display: inline-block;
