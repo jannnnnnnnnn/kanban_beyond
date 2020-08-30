@@ -59,7 +59,7 @@ h5 {
   display: inline-block;
 }
 .boardsDiv {
-  max-height: 200px;
+  min-height: 200px;
 }
 .boards {
   display: inline-block;
