@@ -69,12 +69,7 @@
     <main class="bg">
       <div class="boardsList">
         <!-- Todo -->
-        <section
-          id="board1"
-          class="boardsDiv"
-          draggable="true"
-          ondragstart="event.dataTransfer.setData('text/plain',null)"
-        >
+        <section id="board1" class="boardsDiv">
           <div class="boards">
             <div class="titleBoard addBorder">
               <div></div>
@@ -83,7 +78,9 @@
                 <span class="tooltipText">Tooltip text</span>
               </h5>
               <button class="btn btn-link" type="button">
-                <i class="material-icons md-15">delete_outline</i>
+                <i class="material-icons md-15" onclick="deleteBoard(this)"
+                  >delete_outline</i
+                >
               </button>
             </div>
             <!-- This is tasks list -->
@@ -110,29 +107,13 @@
                     <p class="taskText" ondblclick="ShowElement(this)">
                       Enter Task
                     </p>
-                    <div class="w-100">
-                      <div class="progress">
-                        <div
-                          class="progress-bar progress-bar-striped bg-warning"
-                          style="width: 30%"
-                        ></div>
-                      </div>
-                    </div>
                   </h5>
                 </div>
-                <div
-                  id="collapseOne"
-                  class="collapse"
-                  aria-labelledby="headingOne"
-                  data-parent="#accordion"
-                >
+                <div id="collapseOne" class="collapse">
                   <div class="card-body">
-                    <label>Detailed info</label>
-                    <input type="text" class="form-control" />
-                    <label>Deadline</label>
-                    <input type="date" class="form-control" />
-                    <label>Duration (Days)</label>
-                    <input type="number" class="form-control" />
+                    <label>Detailed info:</label>
+                    <p ondblclick="ShowElement(this)">Enter Description</p>
+                    <button onclick="deleteTask(this)">Delete</button>
                   </div>
                 </div>
               </div>
@@ -151,31 +132,31 @@
         </section>
 
         <!-- IN progress -->
-        <section
-          id="board2"
-          class="boardsDiv"
-          draggable="true"
-          ondragstart="event.dataTransfer.setData('text/plain',null)"
-        >
+        <section id="board1" class="boardsDiv">
           <div class="boards">
             <div class="titleBoard addBorder">
               <div></div>
               <h5 class="help title" ondblclick="ShowElement(this.innerText)">
                 In progress: <span class="tooltipText">Tooltip text</span>
+             
               </h5>
               <button class="btn btn-link" type="button">
-                <i class="material-icons md-15">delete_outline</i>
+                <i class="material-icons md-15" onclick="deleteBoard(this)"
+                  >delete_outline</i
+                >
               </button>
             </div>
             <!-- This is tasks list -->
+
             <div
               class="taskDiv"
               draggable="true"
               ondragstart="event.dataTransfer.setData('text/plain',null)"
             >
               <!-- this is where task content starts -->
+
               <div class="task" id="accordion">
-                <div class="card-header" id="headingTwo">
+                <div class="card-header" id="headingOne">
                   <h5 class="mb-0 collapseTitle">
                     <button
                       class="btn collapsed"
@@ -189,32 +170,19 @@
                     <p class="taskText" ondblclick="ShowElement(this)">
                       Enter Task
                     </p>
-                    <div class="w-100">
-                      <div class="progress">
-                        <div
-                          class="progress-bar progress-bar-striped bg-success"
-                          style="width: 60%"
-                        ></div>
-                      </div>
-                    </div>
                   </h5>
                 </div>
-                <div
-                  id="collapseTwo"
-                  class="collapse"
-                  aria-labelledby="headingTwo"
-                  data-parent="#accordion"
-                >
+                <div id="collapseTwo" class="collapse">
                   <div class="card-body">
-                    <label>Detailed info</label>
-                    <input type="text" />
+                    <label>Detailed info:</label>
+                    <p ondblclick="ShowElement(this)">Enter Description</p>
+                    <button onclick="deleteTask(this)">Delete</button>
                   </div>
                 </div>
               </div>
             </div>
             <!-- this is where task content ends -->
             <button
-              id="addTaskBtn2"
               type="button"
               class="btn btn-outline-secondary w-100"
               onclick="addOneTask(this)"
@@ -227,31 +195,33 @@
         </section>
 
         <!-- Done -->
-        <section
-          id="board3"
-          class="boardsDiv"
-          draggable="true"
-          ondragstart="event.dataTransfer.setData('text/plain',null)"
-        >
+        <section id="board1" class="boardsDiv">
           <div class="boards">
             <div class="titleBoard addBorder">
               <div></div>
               <h5 class="help title" ondblclick="ShowElement(this.innerText)">
                 Done:
+
+
+                <span class="tooltipText">Tooltip text</span>
               </h5>
               <button class="btn btn-link" type="button">
-                <i class="material-icons md-15">delete_outline</i>
+                <i class="material-icons md-15" onclick="deleteBoard(this)"
+                  >delete_outline</i
+                >
               </button>
             </div>
             <!-- This is tasks list -->
+
             <div
               class="taskDiv"
               draggable="true"
               ondragstart="event.dataTransfer.setData('text/plain',null)"
             >
               <!-- this is where task content starts -->
+
               <div class="task" id="accordion">
-                <div class="card-header" id="headingThree">
+                <div class="card-header" id="headingOne">
                   <h5 class="mb-0 collapseTitle">
                     <button
                       class="btn collapsed"
@@ -265,25 +235,13 @@
                     <p class="taskText" ondblclick="ShowElement(this)">
                       Enter Task
                     </p>
-                    <div class="w-100">
-                      <div class="progress">
-                        <div
-                          class="progress-bar progress-bar-striped bg-success"
-                          style="width: 100%"
-                        ></div>
-                      </div>
-                    </div>
                   </h5>
                 </div>
-                <div
-                  id="collapseThree"
-                  class="collapse"
-                  aria-labelledby="headingThree"
-                  data-parent="#accordion"
-                >
+                <div id="collapseThree" class="collapse">
                   <div class="card-body">
-                    <label>Detailed info</label>
-                    <input type="text" />
+                    <label>Detailed info:</label>
+                    <p ondblclick="ShowElement(this)">Enter Description</p>
+                    <button onclick="deleteTask(this)">Delete</button>
                   </div>
                 </div>
               </div>
@@ -292,7 +250,6 @@
             <button
               type="button"
               class="btn btn-outline-secondary w-100"
-              id="addTaskBtn3"
               onclick="addOneTask(this)"
             >
               Add Task +
@@ -302,6 +259,7 @@
           </div>
         </section>
       </div>
+
       <section>
         <button
           type="button"
