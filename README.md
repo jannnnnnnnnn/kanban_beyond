@@ -34,6 +34,7 @@ Kanban Board and Beyond is a front-end only Web Application. It is a tool for wo
 - The user can change the order of columns using drag-and-drop
 - The user can delete columns
 - Help section includes : info bubbles, info text, helpful hints and tutorial
+- Bonus features: the user can change board's background with an URL
 
 ## Screen shots of the APP
 
