@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
+    <link
+      href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/landStyle.css" />
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://raw.githack.com/SortableJS/Sortable/master/Sortable.js"></script>
+    <script src="./javascript/ctxmenu.min/ctxmenu.min.js"></script>
+    <script defer src="./javascript/main.js"></script>
+    <script defer src="./javascript/dragBoards.js"></script>
+    <script defer src="./javascript/dragTask.js"></script>
+    <!-- <script defer src="./javascript/boards.js"></script> -->
+    <script defer src="./javascript/help.js"></script>
+    <script defer src="./javascript/contexmenu.js"></script>
+    <script defer src="./javascript/changingBackground.js"></script>
+  </head>
+  <body>
+    <nav>
+      <div>
+        <a class="navbar-brand" rel="home" href="./index.html"
+          ><i class="material-icons">home</i></a
+        >
+    
+        <span id="kanban">KanbanBeyond</span>
+      </div>
+      <div class="backgroundChange">
+        <input
+        type="text"
+        id="bgchanger"
+        class="backgroundBtn form-control mr-sm-2"
+        placeholder="Add URL To Change Background "
+        />
+        <div class="help">
+        <input
+          class="backgroundBtn btn btn-outline-secondary"
+          type="button"
+          onclick="changebackground();"
+          value="Change Board's Background"
+        />
+        <span class="tooltipText tooltipText4"
+          >if you don't like the background, get the URL of the picture you like
+          and paste it in the input section, submit it, and see the magic</span
+        >
+      </div>
+
+        <div>
+          <a class="right-right" href="#"> &nbsp;&nbsp;&nbsp;Help</a>
+          <label class="switch">
+            <input type="checkbox" value="Off" id="onoff" />
+            <span class="slider round"></span>
+          </label>
+        </div>
+      </div>
+    </nav>
+
+    <main class="bg">
+      <div class="boardsList">
+        <!-- Todo -->
+        <section id="board1" class="boardsDiv">
+          <div class="boards">
+            <div class="titleBoard addBorder">
+              <div></div>
+              <h5 class="help title" ondblclick="ShowElement(this)">
+                To do
+                <span class="tooltipText"
+                  >Double click and you can change the title. Single click and
+                  you can drag the board</span
+                >
+              </h5>
+              <button class="btn btn-link" type="button">
+                <i class="material-icons md-15" onclick="deleteBoard(this)"
+                  >delete_outline</i
+                >
+              </button>
+            </div>
+            <!-- This is tasks list -->
+
+            <div
+              class="taskDiv"
+              draggable="true"
+              ondragstart="event.dataTransfer.setData('text/plain',null)"
+            >
+              <!-- this is where task content starts -->
+
+              <div class="task" id="accordion">
+                <div class="card-header" id="headingOne">
+                  <h5 class="mb-0 collapseTitle">
+                    <button
+                      class="btn collapsed help"
+                      data-toggle="collapse"
+                      data-target="#collapseOne"
+                      aria-expanded="false"
+                      aria-controls="collapseOne"
+                    >
+                      <span class="tooltipText"
+                        >Double click and you can change the task. Single click
+                        and you can drag the task</span
+                      >
+                      <i class="material-icons md-15">keyboard_arrow_down</i>
+                    </button>
+                    <p class="taskText" ondblclick="ShowElement(this)">
+                      Enter Task
+                      <span class="tooltipText"
+                        >Double click and you can change the task name. Single
+                        click and you can drag the task</br> right click and you can see the context menu</span
+                      >
+                    </p>
+                  </h5>
+                </div>
+                <div id="collapseOne" class="collapse">
+                  <div class="card-body bgCard">
+                    <label>Detailed info:</label>
+                    <p class="taskText" ondblclick="ShowElement(this)">Enter Description</p>
+                    <button class="btn btn-outline-danger" onclick="deleteTask(this)">Delete Task</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- this is where task content ends -->
+            <button
+              type="button"
+              class="btn btn-outline-secondary w-100"
+              onclick="addOneTask(this)"
+            >
+              Add Task +
+            </button>
+
+            <!-- This is where tasks list end -->
+          </div>
+        </section>
+
+        <!-- IN progress -->
+        <section id="board1" class="boardsDiv">
+          <div class="boards">
+            <div class="titleBoard addBorder">
+              <div></div>
+              <h5 class="help title" ondblclick="ShowElement(this.innerText)">
+                In progress
+                <span class="tooltipText"
+                  >Double click and you can change the title. Single click and
+                  you can drag the board</span
+                >
+              </h5>
+              <button class="btn btn-link" type="button">
+                <i class="material-icons md-15" onclick="deleteBoard(this)"
+                  >delete_outline</i
+                >
+              </button>
+            </div>
+            <!-- This is tasks list -->
+
+            <div
+              class="taskDiv"
+              draggable="true"
+              ondragstart="event.dataTransfer.setData('text/plain',null)"
+            >
+              <!-- this is where task content starts -->
+
+              <div class="task" id="accordion">
+                <div class="card-header" id="headingOne">
+                  <h5 class="mb-0 collapseTitle help">
+                    <span class="tooltipText"
+                      >Double click and you can change the task. Single click
+                      and you can drag the task</span
+                    >
+                    <button
+                      class="btn collapsed"
+                      data-toggle="collapse"
+                      data-target="#collapseTwo"
+                      aria-expanded="false"
+                      aria-controls="collapseTwo"
+                    >
+                      <i class="material-icons md-15">keyboard_arrow_down</i>
+                    </button>
+                    <p class="taskText" ondblclick="ShowElement(this)">
+                      Enter Task
+                    </p>
+                  </h5>
+                </div>
+                <div id="collapseTwo" class="collapse">
+                  <div class="card-body bgCard">
+                    <label>Detailed info:</label>
+                    <p class="taskText" ondblclick="ShowElement(this)">Enter Description</p>
+                    <button class="btn btn-outline-danger" onclick="deleteTask(this)">Delete Task</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- this is where task content ends -->
+            <button
+              type="button"
+              class="btn btn-outline-secondary w-100"
+              onclick="addOneTask(this)"
+            >
+              Add Task +
+            </button>
+
+            <!-- This is where tasks list end -->
+          </div>
+        </section>
+
+        <!-- Done -->
+        <section id="board1" class="boardsDiv">
+          <div class="boards">
+            <div class="titleBoard addBorder">
+              <div></div>
+              <h5 class="help title" ondblclick="ShowElement(this.innerText)">
+                Done
+
+                <span class="tooltipText"
+                  >Double click and you can change the title. Single click and
+                  you can drag the board</span
+                >
+              </h5>
+              <button class="btn btn-link help" type="button">
+                <i class="material-icons md-15" onclick="deleteBoard(this)"
+                  >delete_outline</i
+                >
+                <span class="tooltipText tooltipText3"
+                        >You can delet the board</span
+                      >
+              </button>
+            </div>
+            <!-- This is tasks list -->
+
+            <div
+              class="taskDiv"
+              draggable="true"
+              ondragstart="event.dataTransfer.setData('text/plain',null)"
+            >
+              <!-- this is where task content starts -->
+
+              <div class="task" id="accordion">
+                <div class="card-header" id="headingOne">
+                  <h5 class="mb-0 collapseTitle">
+                    <button
+                      class="btn collapsed"
+                      data-toggle="collapse"
+                      data-target="#collapseThree"
+                      aria-expanded="false"
+                      aria-controls="collapseThree"
+                    >
+                      <i class="material-icons md-15">keyboard_arrow_down</i>
+                    </button>
+                    <p class="taskText" ondblclick="ShowElement(this)">
+                      Enter Task
+                    </p>
+                  </h5>
+                </div>
+                <div id="collapseThree" class="collapse">
+                  <div class="card-body bgCard">
+                    <label>Detailed info:</label>
+                    <p class="taskText" ondblclick="ShowElement(this)">Enter Description</p>
+                    <button class="btn btn-outline-danger" onclick="deleteTask(this)">Delete Task</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- this is where task content ends -->
+            <button
+              type="button"
+              class="btn btn-outline-secondary w-100"
+              onclick="addOneTask(this)"
+            >
+              Add Task +
+            </button>
+
+            <!-- This is where tasks list end -->
+          </div>
+        </section>
+      </div>
+
+      <section >
+        <button
+          type="button"
+          class="btn btn-outline-dark help newListBtn"
+          id="addBoardBtn"
+          onclick="addBoard()"
+        >
+        New List +
+        <span class="tooltipText"
+          >when you click on "New List" you will create a new list/board, and
+          after ward you can move it around, with dragging and dropping</span
+        >
+        </button>
+      </section>
+
+
+    </main>
+    <footer>
+      <p class="myFooter"> A big thank you to <a href="https://www.mintbean.io/"> Mintbean</a>, <a href="https://featurepeek.com/"> Featurepeek</a>, and <a href="https://github.com/"> GitHub </a> for givinig us the platforms and tools we needed to make KanbanBeyond.</p>
+      <p class="teamsLinksP">
+        <div class="teamsLinks">
+        <div class="footerGithub">
+          <img src="./img/github.svg" class="gitHubIcon">
+          <a href="">Jungu Liu</a>
+          <a href="https://github.com/sanasdh">Sana Sadeh</a>
+          <a href="https://github.com/jannnnnnnnnn">Janet Han</a>       
+        </div>
+        <div class="footerLinkedin">
+          <img src="./img/2.svg" class="linkdInIcon">
+          <a href="">Jungu Liu</a>
+          <a href="www.linkedin.com/in/sana-sadeh"> Sana Sadeh</a>
+          <a href="https://www.linkedin.com/in/janethan/">Janet Han</a>
+        </div>
+      </div>
+      </p>
+    </footer>
+  </body>
+</html>
