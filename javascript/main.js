@@ -2,7 +2,7 @@
 
 /*----- app's state (variables) -----*/
 let boardCounter = 3;
-
+let task_id = 1;
 /*----- cached element references -----*/
 
 /*----- event listeners -----*/
@@ -28,8 +28,32 @@ function ShowElement(element) {
 function addOneTask(element) {
   console.log(element);
   var newobj = document.createElement("DIV");
-  newobj.innerHTML =
-    '<div class="task" id="accordion"> <div class="card-header" id="headingTwo"> <div class="taskDiv" draggable="true" ondragstart="event.dataTransfer.setData("text/plain",null)"><div class="dropzone"></div> <h5 class="mb-0"><button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">+</button><input type="text" /> </h5> </div> </div> <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion"> <div class="card-body"> <label>Detailed info</label> <input type="text" /><div class="dropzone"></div></div></div></div>';
+  newobj.className = "task";
+  newobj.innerHTML = `<div class="card-header" id="headingOne">
+  <h5 class="mb-0 collapseTitle">
+    <button
+      class="btn collapsed"
+      data-toggle="collapse"
+      data-target="#collapse${task_id}"
+      aria-expanded="false"
+      aria-controls="collapse${task_id}"
+    >
+      <i class="material-icons md-15">keyboard_arrow_down</i>
+    </button>
+    <p class="taskText" ondblclick="ShowElement(this)">
+      Enter Task
+    </p>
+  </h5>
+</div>
+<div id="collapse${task_id}" class="collapse">
+  <div class="card-body">
+    <label>Detailed info:</label>
+    <p ondblclick="ShowElement(this)">Enter Description</p>
+    <button onclick="deleteTask(this)">Delete</button>
+  </div>
+</div>
+</div>`;
+  task_id += 1;
   element.parentNode.insertBefore(newobj, element);
 }
 
