@@ -47,6 +47,10 @@ nav > a.active {
 .right-right {
   color: white;
 }
+#kanban {
+  font-family: "Kaushan Script", cursive;
+  font-size: 20px;
+}
 /* main  */
 body > main {
   grid-area: main;
