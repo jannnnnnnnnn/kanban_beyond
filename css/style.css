@@ -24,20 +24,20 @@ body > nav {
   align-items: center;
   padding: 0 20px 0 30px;
 }
-nav > a {
-  margin: 20px;
+nav > div > a {
+  /* margin: 20px; */
   text-decoration: none;
   padding: 10px;
   border-radius: 5px;
   color: white;
 }
 
-nav > a:hover {
+nav > div > a:hover {
   color: white;
   background-color: #424748;
 }
 
-nav > a.active {
+nav > div > a.active {
   color: white;
 }
 .navHelp {
@@ -266,6 +266,17 @@ input:checked + .slider:before {
   z-index: -1;
 }
 .backgroundBtn {
-  align-self: flex-end;
-  height: 30px;
+  /* align-self: flex-end; */
+  height: 25px;
+  width: 150px;
+}
+
+.backgroundChange {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.newListBtn {
+  width: 100px;
 }

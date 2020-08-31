@@ -52,17 +52,33 @@
   </head>
   <body>
     <nav>
-      <a class="navbar-brand" rel="home" href="./landingpage.html"
-        ><i class="material-icons">home</i></a
-      >
-      <span id="kanban">KanbanBeyond</span>
-
       <div>
-        <a class="right-right" href="#">Help</a>
-        <label class="switch">
-          <input type="checkbox" value="Off" id="onoff" />
-          <span class="slider round"></span>
-        </label>
+        <a class="navbar-brand" rel="home" href="./landingpage.html"
+          ><i class="material-icons">home</i></a
+        >
+    
+        <span id="kanban">KanbanBeyond</span>
+      </div>
+      <div class="backgroundChange">
+        <input
+        type="text"
+        id="bgchanger"
+        class="backgroundBtn form-control mr-sm-2"
+        placeholder="Add URL To Change Background "
+        />
+        <input
+          class="backgroundBtn btn btn-outline-secondary"
+          type="button"
+          onclick="changebackground();"
+          value="Change Board's Background"
+        />
+        <div>
+          <a class="right-right" href="#"> &nbsp;&nbsp;&nbsp;Help</a>
+          <label class="switch">
+            <input type="checkbox" value="Off" id="onoff" />
+            <span class="slider round"></span>
+          </label>
+        </div>
       </div>
     </nav>
 
@@ -260,29 +276,18 @@
         </section>
       </div>
 
-      <section>
+      <section class="newListBtn">
         <button
           type="button"
           class="btn btn-outline-dark"
           id="addBoardBtn"
           onclick="addBoard()"
         >
-          New List +
+          <span>New List +</span>
         </button>
       </section>
 
-      <input
-        type="text"
-        id="bgchanger"
-        class="backgroundBtn"
-        placeholder="Add URL To Change Background "
-      />
-      <input
-        class="backgroundBtn"
-        type="button"
-        onclick="changebackground();"
-        value="Change your background"
-      />
+
     </main>
   </body>
 </html>
