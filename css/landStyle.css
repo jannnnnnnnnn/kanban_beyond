@@ -117,16 +117,17 @@ body > main {
   padding: 5px 10px;
   width: 136px;
   margin: 0 auto;
-  margin-bottom: 100px;
+  margin-top: 40px;
   text-align: center;
 }
 /* first section */
 #moto {
   margin: 10px;
   font-size: 30px;
-  margin-top: 70px;
+  margin-top: 60px;
   margin-bottom: 60px;
   text-align: center;
+  color: white;
 }
 .kanban {
   font-family: "Kaushan Script", cursive;
@@ -251,4 +252,11 @@ footer {
 .gitHubIcon,
 .linkdInIcon {
   width: 24px;
+}
+.newbak {
+  background-image: url("https://magicmockups.com/media/screen/guest/51/8148af9d5a024392a8b677bbfd53a701_30_1600.jpg");
+  background-size: cover;
+  background-position: center;
+  padding-bottom: 350px;
+  margin-bottom: 10px;
 }

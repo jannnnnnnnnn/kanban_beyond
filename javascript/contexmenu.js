@@ -1,9 +1,9 @@
 var contextMenu = CtxMenu(".taskDiv");
 contextMenu.addItem("Move", moveBoard);
 contextMenu.addItem("Delete", deleteFunc);
-
 function moveBoard(e) {
   let count = 0;
+
   a = prompt("write the name of the column you want this task be in it:");
   a = a.toUpperCase();
   help.forEach(function (h) {
