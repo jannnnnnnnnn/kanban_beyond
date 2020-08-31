@@ -53,10 +53,10 @@ function addOneTask(element) {
   </h5>
 </div>
 <div id="collapse${task_id}" class="collapse">
-  <div class="card-body">
+  <div class="card-body bgCard">
     <label>Detailed info:</label>
-    <p ondblclick="ShowElement(this)">Enter Description</p>
-    <button onclick="deleteTask(this)">Delete</button>
+    <p class="taskText" ondblclick="ShowElement(this)">Enter Description</p>
+    <button class="btn btn-outline-danger" onclick="deleteTask(this)">Delete Task</button>
   </div>
 </div>
 </div>`;
