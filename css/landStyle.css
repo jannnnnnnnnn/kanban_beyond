@@ -1,0 +1,151 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  /* background: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/6cb3a910-a3af-4d5a-8a65-f5f2c0672573/d4f8ej9-04879e6a-bbc9-4cc6-8364-6edfe1a4143c.jpg/v1/fill/w_1280,h_960,q_75,strp/cork_board_texture_12_by_carlbert_d4f8ej9-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3siaGVpZ2h0IjoiPD05NjAiLCJwYXRoIjoiXC9mXC82Y2IzYTkxMC1hM2FmLTRkNWEtOGE2NS1mNWYyYzA2NzI1NzNcL2Q0ZjhlajktMDQ4NzllNmEtYmJjOS00Y2M2LTgzNjQtNmVkZmUxYTQxNDNjLmpwZyIsIndpZHRoIjoiPD0xMjgwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.N_BheyPikOSHH-5nferIoz2QVYJkbDvIxURkiu12LDU"); */
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 50px 1fr;
+  grid-template-areas:
+    "nav"
+    "main";
+}
+
+/* header */
+body > nav {
+  grid-area: nav;
+  /* background-color: #b8c0c2; */
+  background-color: #8fcfd1;
+  opacity: 0.8;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px 0 30px;
+}
+nav > a {
+  margin: 20px;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+}
+
+nav > a:hover {
+  color: white;
+  background-color: #424748;
+}
+
+nav > a.active {
+  color: white;
+}
+.navHelp {
+  float: right;
+  margin-right: 0;
+}
+.right-right {
+  color: white;
+}
+#kanban {
+  font-family: "Kaushan Script", cursive;
+  font-size: 20px;
+}
+/* main  */
+body > main {
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+.collapseTitle {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.titleBoard {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.title {
+  font-family: "Kaushan Script", cursive;
+  font-size: x-large;
+}
+
+.taskText {
+  min-width: 140px;
+  border: 1px dotted grey;
+}
+
+.md-15 {
+  font-size: 15px;
+}
+
+.bg {
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background: rgba(246, 239, 166, 0.3); */
+}
+
+.bg::after {
+  content: "";
+  /* background: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/6cb3a910-a3af-4d5a-8a65-f5f2c0672573/d4f8ej9-04879e6a-bbc9-4cc6-8364-6edfe1a4143c.jpg/v1/fill/w_1280,h_960,q_75,strp/cork_board_texture_12_by_carlbert_d4f8ej9-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3siaGVpZ2h0IjoiPD05NjAiLCJwYXRoIjoiXC9mXC82Y2IzYTkxMC1hM2FmLTRkNWEtOGE2NS1mNWYyYzA2NzI1NzNcL2Q0ZjhlajktMDQ4NzllNmEtYmJjOS00Y2M2LTgzNjQtNmVkZmUxYTQxNDNjLmpwZyIsIndpZHRoIjoiPD0xMjgwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.N_BheyPikOSHH-5nferIoz2QVYJkbDvIxURkiu12LDU"); */
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+.backgroundBtn {
+  align-self: flex-end;
+  height: 30px;
+}
+/* landing page, main */
+#free {
+  border-radius: 10px;
+  font-size: 25px;
+  background-color: #364652;
+  padding: 5px 10px;
+  width: 136px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  text-align: center;
+}
+#moto {
+  margin: 10px;
+  font-size: 30px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+.kanban {
+  font-family: "Kaushan Script", cursive;
+}
+.aClass {
+  color: white;
+}
+.aClass:hover {
+  opacity: 0.5;
+  text-decoration: none;
+  color: white;
+}
+#team {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+.teamMembers {
+  display: flex;
+  flex-direction: row;
+}
+.teamsections {
+  margin: 15px auto;
+  font-size: 30px;
+}

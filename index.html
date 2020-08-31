@@ -55,6 +55,8 @@
       <a class="navbar-brand" rel="home" href="./landingpage.html"
         ><i class="material-icons">home</i></a
       >
+      <span id="kanban">KanbanBeyond</span>
+
       <div>
         <a class="right-right" href="#">Help</a>
         <label class="switch">
@@ -76,7 +78,7 @@
           <div class="boards">
             <div class="titleBoard addBorder">
               <div></div>
-              <h5 class="help title" ondblclick="ShowElement(this)">
+              <h5 class="help title" ondblclick="ShowElement(this.innerText)">
                 To do:
                 <span class="tooltipText">Tooltip text</span>
               </h5>
@@ -158,7 +160,7 @@
           <div class="boards">
             <div class="titleBoard addBorder">
               <div></div>
-              <h5 class="help title" ondblclick="ShowElement(this)">
+              <h5 class="help title" ondblclick="ShowElement(this.innerText)">
                 In progress: <span class="tooltipText">Tooltip text</span>
               </h5>
               <button class="btn btn-link" type="button">
@@ -234,7 +236,9 @@
           <div class="boards">
             <div class="titleBoard addBorder">
               <div></div>
-              <h5 class="help title" ondblclick="ShowElement(this)">Done:</h5>
+              <h5 class="help title" ondblclick="ShowElement(this.innerText)">
+                Done:
+              </h5>
               <button class="btn btn-link" type="button">
                 <i class="material-icons md-15">delete_outline</i>
               </button>
