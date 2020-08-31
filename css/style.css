@@ -290,7 +290,7 @@ input:checked + .slider:before {
 }
 
 .newListBtn {
-  width: 100px;
+  width: 200px;
 }
 
 .bgCard {
