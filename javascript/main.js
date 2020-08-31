@@ -8,6 +8,8 @@ let task_id = 1;
 /*----- event listeners -----*/
 
 /*----- functions -----*/
+draggableTask();
+draggableBoard();
 
 function ShowElement(element) {
   var oldhtml = element.innerHTML;
@@ -61,6 +63,7 @@ function addOneTask(element) {
 </div>`;
   task_id += 1;
   element.parentNode.insertBefore(newobj, element);
+  draggableTask();
 }
 
 function addBoard() {
@@ -130,17 +133,23 @@ function deleteTask(element) {
     element.parentNode.parentNode.parentNode.remove();
   }
 }
-var taskDiv = document.querySelectorAll(".taskDiv");
-taskDiv.forEach((t) => {
-  Sortable.create(t, {
-    group: "sorting",
-    sort: true,
+
+function draggableTask() {
+  var taskDiv = document.querySelectorAll(".task");
+  taskDiv.forEach((t) => {
+    Sortable.create(t, {
+      group: "nested",
+      animation: 150,
+      fallbackOnBody: true,
+      swapThreshold: 0.65,
+    });
   });
-});
+}
+function draggableBoard() {
+  var main = document.querySelector(".boardsList");
 
-var main = document.querySelector(".boardsList");
-
-Sortable.create(main, {
-  group: "sorting",
-  sort: true,
-});
+  Sortable.create(main, {
+    animation: 150,
+    ghostClass: "blue-background-class",
+  });
+}
