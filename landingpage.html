@@ -20,7 +20,7 @@
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/landStyle.css" />
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -45,31 +45,103 @@
     <script defer src="./javascript/main.js"></script>
     <script defer src="./javascript/dragBoards.js"></script>
     <script defer src="./javascript/dragTask.js"></script>
-    <!-- <script defer src="./javascript/boards.js"></script> -->
     <script defer src="./javascript/help.js"></script>
     <script defer src="./javascript/contexmenu.js"></script>
-    <script defer src="./javascript/changingBackground.js"></script>
   </head>
   <body>
     <nav>
       <a class="navbar-brand" rel="home" href="./index.html"
         ><i class="material-icons large">dashboard</i>Your Board
       </a>
+      <span id="kanban">KanbanBeyond</span>
       <div>
-        <a class="right-right" href="#">Help</a>
-        <label class="switch">
-          <input type="checkbox" value="Off" id="onoff" />
-          <span class="slider round"></span>
-        </label>
+        <a class="right-right" href="./index.html">Use It Forever For Free</a>
       </div>
     </nav>
 
     <main class="bg">
-      <h1 class="title" width="100" height="600">
-        "Kanban Board and Beyond is a front-end only Web Application. It is a
-        tool for workflow visualization or just to create your fun lists."
+      <div class="newbak">
+      <h1 id="moto">
+        With <span class="kanban"> KanbanBeyond</span>, add Time Mangament in your resume with confident! </br>
       </h1>
-      <img src="https://i.imgur.com/wGoTnGa.png" width="600" height="600" />
+      <div id="free"><a class="aClass" href="./index.html"> It's Free!</a></div>
+    </div>
+      <div class="helpSection">
+        <video width="450px" controls loop>
+          <source src="./video/video.mp4" type="video/mp4">
+            </video>
+            <div>
+              <h3 class="helpTitle">You nedd help? We got you!</h3>
+              <p class="helpHere">At <span class="kanban">KanbanBeyond</span> our goal is to make the experience for users as easy as possible. We have used standard icons to make it easier for you to navigate through our website. However, extra help never hurts, right? On the top left corner, there is an on/off help switch. whenever you want, turn on the help switch and just hover on the problem you have, I'm sure we already implement bubble info for it.</p>
+            </div>
+      </div>
+
+      <div class="funSection">
+            <div>
+              <h3 class="funTitle">You'll never get tired of using it</h3>
+              <p class="funHere">You can change the background of your page whenever. All you need is the url of your image. you can change the order of your lists or tasks by simply dragging and dropping them wherever you want. </p>
+            </div>
+            <video width="450px" controls loop>
+              <source src="./video/video2.mp4" type="video/mp4">
+                </video>
+      </div>
+
+
+
+      <div id="team">
+        <h2 class="teamsections">Meet The Team</h2>
+        <div class="teamMembers">
+          <div id="jungu">
+            <img src="./img/JL.jpg">
+            <h3 class="myName">Jungu Liu</h3> 
+            <p class="myInfo">Graduated from the computer science department of university of Alberta. I am good at HTML5, CSS3, JavaScript, Python. I am passionate about learning new programming technique.</p>
+            <p>Skills: HTML5 | CSS3 | JavaScript | Python | MongoDB | Django | express and Node.js</p>
+            <div>GitHub:<a href="https://github.com/JunguLiu"> You can see my project here</a></div>
+            <div>LinkdIn:<a href="https://www.linkedin.com/in/jungu-liu"> Let's connect on LinkdIn</a></div>
+          </div>
+        <div id="sana">
+          <img src="./img/ss.jpg">
+          <h3 class="myName">Sana Sadeh</h3> 
+            <p class="myInfo">Graduated from the Mechanical Engineering department of the University of Toronto and current student at General Assembly software engineering. Programming and making awesome websites from scratch is my passion.</p>
+            <p>Skills: HTML5 | CSS3 | JavaScript | Python | MongoDB | Django | express and Node.js</p>
+
+            <div>GitHub:<a href="https://github.com/sanasdh"> You can see my project here</a></div>
+            <div>LinkdIn:<a href="www.linkedin.com/in/sana-sadeh"> Let's connect on LinkdIn</a></div>
+          </div>
+       
+        <div id="janet">
+          <img src="./img/jj.jpg">
+          <h3 class="myName">Janet Han, P.ENG., PMP </h3> 
+            <p class="myInfo">
+              Aspiring Software Developer. Graduated from University of Waterloo, Systems Design Engineer. Passionate about Technology & Innovation, Thrive on solving difficult problems.</p>
+            <p>Skills: HTML5 | CSS3 | JavaScript | Python | MongoDB | Django | express and Node.js</p>
+
+            <div>GitHub:<a href="https://github.com/jannnnnnnnnn"> You can see my project here</a></div>
+            <div>LinkdIn:<a href="https://www.linkedin.com/in/janethan/"> Let's connect on LinkdIn</a></div>
+          
+        </div>
+       
+      </div>
+      </div>
     </main>
+    <footer>
+      <p class="myFooter"> A big thank you to <a href="https://www.mintbean.io/"> Mintbean</a>, <a href="https://featurepeek.com/"> Featurepeek</a>, and <a href="https://github.com/"> GitHub </a> for givinig us the platforms and tools we needed to make KanbanBeyond.</p>
+      <p class="teamsLinksP">
+        <div class="teamsLinks">
+        <div class="footerGithub">
+          <img src="./img/github.svg" class="gitHubIcon">
+          <a href="https://github.com/JunguLiu">Jungu Liu</a>
+          <a href="https://github.com/sanasdh">Sana Sadeh</a>
+          <a href="https://github.com/jannnnnnnnnn">Janet Han</a>       
+        </div>
+        <div class="footerLinkedin">
+          <img src="./img/2.svg" class="linkdInIcon">
+          <a href="https://www.linkedin.com/in/jungu-liu">Jungu Liu</a>
+          <a href="www.linkedin.com/in/sana-sadeh"> Sana Sadeh</a>
+          <a href="https://www.linkedin.com/in/janethan/">Janet Han</a>
+        </div>
+      </div>
+      </p>
+    </footer>
   </body>
 </html>
