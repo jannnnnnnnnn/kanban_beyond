@@ -15,7 +15,13 @@ function ShowElement(element) {
   newobj.type = "text";
   newobj.value = oldhtml;
   newobj.onblur = function () {
-    element.innerHTML = this.value == oldhtml ? oldhtml : this.value;
+    if (this.value == oldhtml) {
+      element.innerHTML = oldhtml;
+    } else if (this.value == "") {
+      element.innerHTML = "&nbsp";
+    } else {
+      element.innerHTML = this.value;
+    }
   };
   element.innerHTML = "";
   element.appendChild(newobj);
