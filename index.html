@@ -81,7 +81,9 @@
                 <span class="tooltipText">Tooltip text</span>
               </h5>
               <button class="btn btn-link" type="button">
-                <i class="material-icons md-15">delete_outline</i>
+                <i class="material-icons md-15" onclick="deleteBoard(this)"
+                  >delete_outline</i
+                >
               </button>
             </div>
             <!-- This is tasks list -->
@@ -99,23 +101,15 @@
                     <button
                       class="btn collapsed"
                       data-toggle="collapse"
-                      data-target="#collapseOne"
+                      data-target="#collapseThree"
                       aria-expanded="false"
-                      aria-controls="collapseOne"
+                      aria-controls="collapseThree"
                     >
                       <i class="material-icons md-15">keyboard_arrow_down</i>
                     </button>
                     <p class="taskText" ondblclick="ShowElement(this)">
                       Enter Task
                     </p>
-                    <div class="w-100">
-                      <div class="progress">
-                        <div
-                          class="progress-bar progress-bar-striped bg-warning"
-                          style="width: 30%"
-                        ></div>
-                      </div>
-                    </div>
                   </h5>
                 </div>
                 <div
@@ -125,12 +119,9 @@
                   data-parent="#accordion"
                 >
                   <div class="card-body">
-                    <label>Detailed info</label>
-                    <input type="text" class="form-control" />
-                    <label>Deadline</label>
-                    <input type="date" class="form-control" />
-                    <label>Duration (Days)</label>
-                    <input type="number" class="form-control" />
+                    <label>Detailed info:</label>
+                    <p ondblclick="ShowElement(this)">Description</p>
+                    <button onclick="deleteTask(this)">Delete</button>
                   </div>
                 </div>
               </div>

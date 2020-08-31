@@ -87,12 +87,19 @@ function addBoard() {
   boardDiv.appendChild(addTaskBtn);
   newSection.appendChild(dropzoneDiv);
 }
-
-function deleteBoard(evt) {
-  alert("Are you sure you want to delete" + evt);
-  console.log(evt);
+//delete board
+function deleteBoard(element) {
+  if (confirm("Are you sure you want to delete this column ?")) {
+    element.parentNode.parentNode.parentNode.parentNode.remove();
+  }
 }
 
+//delete task
+function deleteTask(element) {
+  if (confirm("Are you sure you want to delete this task ?")) {
+    element.parentNode.parentNode.parentNode.remove();
+  }
+}
 var taskDiv = document.querySelectorAll(".taskDiv");
 taskDiv.forEach((t) => {
   Sortable.create(t, {
