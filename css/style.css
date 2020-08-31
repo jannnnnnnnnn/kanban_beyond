@@ -55,7 +55,6 @@ body > main {
   align-items: left;
   background-color: #e8eceb;
   padding: 20px;
-  /* overflow-y: scroll; */
 }
 
 /* boards */
@@ -63,7 +62,7 @@ h5 {
   display: inline-block;
 }
 .boardsDiv {
-  max-height: 200px;
+  max-height: 500px;
   display: flex;
   flex-direction: row;
   float: left;
@@ -75,9 +74,10 @@ h5 {
   /* margin: 5px; */
   min-width: 50px;
   /* height: 300px; */
-  max-width: 200px;
-
+  max-width: 250px;
+  overflow-y: auto;
   border-radius: 5px;
+  margin: 0 5px;
 }
 
 .addBorad {
