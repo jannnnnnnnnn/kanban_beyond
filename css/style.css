@@ -221,6 +221,9 @@ input:checked + .slider:before {
   right: 50px;
   top: 20px;
 }
+.tooltipText4 {
+  top: 10px;
+}
 .tooltipHelp:hover .tooltipText {
   visibility: visible;
   /* display: block; */
@@ -287,7 +290,7 @@ input:checked + .slider:before {
 }
 
 .newListBtn {
-  width: 100px;
+  width: 200px;
 }
 
 .bgCard {

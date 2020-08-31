@@ -36,7 +36,7 @@ function ShowElement(element) {
 function addOneTask(element) {
   var newobj = document.createElement("DIV");
   newobj.className = "task";
-  newobj.innerHTML = `<div class="card-header" id="headingOne">
+  newobj.innerHTML = `<div class="card-header taskDiv id="headingOne">
   <h5 class="mb-0 collapseTitle">
     <button
       class="btn collapsed"
