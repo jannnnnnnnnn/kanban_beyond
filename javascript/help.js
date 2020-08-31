@@ -1,5 +1,8 @@
 let onoff = document.getElementById("onoff");
 onoff.addEventListener("click", onoffFunc);
+let taskText = document.querySelectorAll(".taskText");
+let boards = document.querySelectorAll(".boards");
+
 let help = document.querySelectorAll(".help");
 // hide
 let tooltiptext = document.querySelectorAll(".tooltipText");
@@ -9,6 +12,12 @@ let tooltiptext = document.querySelectorAll(".tooltipText");
 function onoffFunc() {
   currentvalue = onoff.value;
   if (currentvalue == "Off") {
+    taskText.forEach(function (b) {
+      boards.forEach(function (bb) {
+        bb.style.minWidth = "200px";
+        b.style.minWidth = "135px";
+      });
+    });
     help.forEach(function (h) {
       h.classList.add("tooltipHelp");
       h.style.display = "block";

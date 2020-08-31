@@ -116,13 +116,15 @@ body > main {
   padding: 5px 10px;
   width: 136px;
   margin: 0 auto;
-  margin-bottom: 50px;
+  margin-bottom: 100px;
   text-align: center;
 }
+/* first section */
 #moto {
   margin: 10px;
   font-size: 30px;
-  margin-bottom: 30px;
+  margin-top: 70px;
+  margin-bottom: 60px;
   text-align: center;
 }
 .kanban {
@@ -136,6 +138,42 @@ body > main {
   text-decoration: none;
   color: white;
 }
+
+/* help section */
+.helpSection {
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  max-width: 950px;
+  margin-bottom: 100px;
+}
+.helpTitle {
+  margin: 20px;
+  margin-top: 0;
+}
+.helpHere {
+  text-align: justify;
+  margin-left: 20px;
+}
+/* help section */
+.funSection {
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  max-width: 950px;
+  margin-bottom: 100px;
+}
+.funTitle {
+  margin-top: 0;
+  text-align: right;
+  margin-right: 20px;
+}
+.funHere {
+  text-align: justify;
+  margin-right: 20px;
+}
+
+/* Team Section */
 #team {
   display: flex;
   flex-direction: column;
@@ -144,8 +182,32 @@ body > main {
 .teamMembers {
   display: flex;
   flex-direction: row;
+  width: 100%;
 }
 .teamsections {
-  margin: 15px auto;
+  margin: 5px auto;
   font-size: 30px;
+}
+#sana {
+  margin: 10px;
+  max-width: 300px;
+}
+#janet {
+  margin: 10px;
+  max-width: 300px;
+}
+#jungu {
+  margin: 10px;
+  max-width: 300px;
+}
+img {
+  max-width: 300px;
+}
+.myName {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.myInfo {
+  text-align: justify;
+  max-width: 300px;
 }
