@@ -15,6 +15,7 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
     />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
     <link
       href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"
       rel="stylesheet"
@@ -89,9 +90,12 @@
           <div class="boards">
             <div class="titleBoard addBorder">
               <div></div>
-              <h5 class="help title" ondblclick="ShowElement(this.innerText)">
+              <h5 class="help title" ondblclick="ShowElement(this)">
                 To do:
-                <span class="tooltipText">Tooltip text</span>
+                <span class="tooltipText"
+                  >Double click and you can change the title. Single click and
+                  you can drag the board</span
+                >
               </h5>
               <button class="btn btn-link" type="button">
                 <i class="material-icons md-15" onclick="deleteBoard(this)"
@@ -112,16 +116,24 @@
                 <div class="card-header" id="headingOne">
                   <h5 class="mb-0 collapseTitle">
                     <button
-                      class="btn collapsed"
+                      class="btn collapsed help"
                       data-toggle="collapse"
                       data-target="#collapseOne"
                       aria-expanded="false"
                       aria-controls="collapseOne"
                     >
+                      <span class="tooltipText"
+                        >Double click and you can change the task. Single click
+                        and you can drag the task</span
+                      >
                       <i class="material-icons md-15">keyboard_arrow_down</i>
                     </button>
                     <p class="taskText" ondblclick="ShowElement(this)">
                       Enter Task
+                      <span class="tooltipText"
+                        >Double click and you can change the task name. Single
+                        click and you can drag the task</br> right click and you can see the context menu</span
+                      >
                     </p>
                   </h5>
                 </div>
@@ -153,8 +165,11 @@
             <div class="titleBoard addBorder">
               <div></div>
               <h5 class="help title" ondblclick="ShowElement(this.innerText)">
-                In progress: <span class="tooltipText">Tooltip text</span>
-             
+                In progress:
+                <span class="tooltipText"
+                  >Double click and you can change the title. Single click and
+                  you can drag the board</span
+                >
               </h5>
               <button class="btn btn-link" type="button">
                 <i class="material-icons md-15" onclick="deleteBoard(this)"
@@ -173,7 +188,11 @@
 
               <div class="task" id="accordion">
                 <div class="card-header" id="headingOne">
-                  <h5 class="mb-0 collapseTitle">
+                  <h5 class="mb-0 collapseTitle help">
+                    <span class="tooltipText"
+                      >Double click and you can change the task. Single click
+                      and you can drag the task</span
+                    >
                     <button
                       class="btn collapsed"
                       data-toggle="collapse"
@@ -218,13 +237,18 @@
               <h5 class="help title" ondblclick="ShowElement(this.innerText)">
                 Done:
 
-
-                <span class="tooltipText">Tooltip text</span>
+                <span class="tooltipText"
+                  >Double click and you can change the title. Single click and
+                  you can drag the board</span
+                >
               </h5>
-              <button class="btn btn-link" type="button">
+              <button class="btn btn-link help" type="button">
                 <i class="material-icons md-15" onclick="deleteBoard(this)"
                   >delete_outline</i
                 >
+                <span class="tooltipText"
+                        >You can delet the board</span
+                      >
               </button>
             </div>
             <!-- This is tasks list -->
@@ -279,15 +303,39 @@
       <section class="newListBtn">
         <button
           type="button"
-          class="btn btn-outline-dark"
+          class="btn btn-outline-dark help"
           id="addBoardBtn"
           onclick="addBoard()"
         >
+
+
+
           <span>New List +</span>
+          <span class="tooltipText"
+            >when you click on "New List" you will create a new list/board, and
+            after ward you can move it around, with dragging and dropping</span
+          >
         </button>
       </section>
 
-
+      <input
+        type="text"
+        id="bgchanger"
+        class="backgroundBtn"
+        placeholder="Add URL To Change Background "
+      />
+      <div class="backgroundBtn help">
+        <input
+          class="backgroundBtn"
+          type="button"
+          onclick="changebackground();"
+          value="Change your background"
+        />
+        <span class="tooltipText tooltipText2"
+          >if you don't like the background, get the URL of the picture you like
+          and paste it in the input section, submit it, and see the magic</span
+        >
+      </div>
     </main>
   </body>
 </html>

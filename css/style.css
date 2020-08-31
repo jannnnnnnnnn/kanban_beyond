@@ -77,7 +77,7 @@ h5 {
   background-color: #f6ab6c;
   /* margin: 5px; */
   min-width: 50px;
-  /* height: 300px; */
+  min-height: 250px;
   max-width: 250px;
   overflow-y: auto;
   border-radius: 5px;
@@ -211,8 +211,12 @@ input:checked + .slider:before {
   padding: 5px 0;
   position: absolute;
   z-index: 1;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 12px;
 }
-
+.tooltipText2 {
+  bottom: 10px;
+}
 .tooltipHelp:hover .tooltipText {
   visibility: visible;
   /* display: block; */
@@ -240,6 +244,7 @@ input:checked + .slider:before {
 .taskText {
   min-width: 140px;
   border: 1px dotted grey;
+  display: inline;
 }
 
 .md-15 {
