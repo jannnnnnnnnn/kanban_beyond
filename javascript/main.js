@@ -34,7 +34,6 @@ function ShowElement(element) {
 //add button must in the task list divison
 //onclick='addTask(this)'
 function addOneTask(element) {
-  console.log(element);
   var newobj = document.createElement("DIV");
   newobj.className = "task";
   newobj.innerHTML = `<div class="card-header" id="headingOne">
@@ -67,58 +66,71 @@ function addOneTask(element) {
 }
 
 function addBoard() {
-  const mainSection = document.querySelector("main");
-  //count number of boards
-  boardCounter = boardCounter + 1;
-  //creating section portion
-  const newSection = document.createElement("Section");
-  newSection.id = "board" + boardCounter;
-  newSection.classList.add("boardsDiv");
-  newSection.draggable = true;
-  newSection.ondragstart = () => {
-    event.dataTransfer.setData("text/plain", null);
-  };
-  //creating dropzone section
-  const dropzoneDiv = document.createElement("div");
-  dropzoneDiv.classList.add("boardDropzone");
-  //creating board portion
-  const boardDiv = document.createElement("div");
-  boardDiv.classList.add("boards");
-  //creating board title div portion
-  const titleDiv = document.createElement("div");
-  titleDiv.classList.add("titleBoard");
-  //creating title portion
-  const title = document.createElement("h5");
-  title.classList.add("help", "title");
-  title.innerHTML =
-    'Enter List Title<span class="tooltipText">Tooltip text</span>';
-  title.ondblclick = () => {
-    ShowElement(this);
-  };
-  //creating delete button
-  const deleteBtn = document.createElement("button");
-  deleteBtn.id = "deleteBoard" + boardCounter;
-  deleteBtn.classList.add("btn", "btn-outline-secondary", "boardMenu");
-  deleteBtn.type = "button";
-  deleteBtn.innerHTML = '<i class="material-icons">delete_outline</i>';
-  //creating add task button portion
-  const addTaskBtn = document.createElement("button");
-  addTaskBtn.classList.add("btn", "btn-outline-secondary", "w-100");
-  addTaskBtn.onclick = () => {
-    addOneTask(this);
-  };
-  addTaskBtn.innerHTML = "Add +";
-  addTaskBtn.id = "addTaskBtn" + boardCounter;
+  var newobj = document.createElement("SECTION");
+  newobj.className = "boardsDiv";
+  newobj.innerHTML = `
+  <div class="boards">
+    <div class="titleBoard addBorder">
+      <div></div>
+      <h5 class="help title" ondblclick="ShowElement(this)">
+        To do:
+        <span class="tooltipText">Tooltip text</span>
+      </h5>
+      <button class="btn btn-link" type="button">
+        <i class="material-icons md-15" onclick="deleteBoard(this)"
+          >delete_outline</i
+        >
+      </button>
+    </div>
+    <!-- This is tasks list -->
 
-  //adding elements to the DOM
-  mainSection.appendChild(newSection);
-  newSection.appendChild(dropzoneDiv);
-  newSection.appendChild(boardDiv);
-  boardDiv.appendChild(titleDiv);
-  titleDiv.appendChild(title);
-  titleDiv.appendChild(deleteBtn);
-  boardDiv.appendChild(addTaskBtn);
-  newSection.appendChild(dropzoneDiv);
+    <div
+      class="taskDiv"
+      draggable="true"
+      ondragstart="event.dataTransfer.setData('text/plain',null)"
+    >
+      <!-- this is where task content starts -->
+
+      <div class="task" id="accordion">
+        <div class="card-header" id="headingOne">
+          <h5 class="mb-0 collapseTitle">
+            <button
+              class="btn collapsed"
+              data-toggle="collapse"
+              data-target="#collapse${task_id}"
+              aria-expanded="false"
+              aria-controls="collapse${task_id}"
+            >
+              <i class="material-icons md-15">keyboard_arrow_down</i>
+            </button>
+            <p class="taskText" ondblclick="ShowElement(this)">
+              Enter Task
+            </p>
+          </h5>
+        </div>
+        <div id="collapse${task_id}" class="collapse">
+          <div class="card-body">
+            <label>Detailed info:</label>
+            <p ondblclick="ShowElement(this)">Enter Description</p>
+            <button onclick="deleteTask(this)">Delete</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- this is where task content ends -->
+    <button
+      type="button"
+      class="btn btn-outline-secondary w-100"
+      onclick="addOneTask(this)"
+    >
+      Add Task +
+    </button>
+
+    <!-- This is where tasks list end -->
+  </div>`;
+  task_id += 1;
+  document.querySelector(".boardsList").appendChild(newobj);
+  draggableBoard();
 }
 //delete board
 function deleteBoard(element) {
@@ -145,6 +157,7 @@ function draggableTask() {
     });
   });
 }
+
 function draggableBoard() {
   var main = document.querySelector(".boardsList");
 
