@@ -6,10 +6,11 @@ body {
   /* background: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/6cb3a910-a3af-4d5a-8a65-f5f2c0672573/d4f8ej9-04879e6a-bbc9-4cc6-8364-6edfe1a4143c.jpg/v1/fill/w_1280,h_960,q_75,strp/cork_board_texture_12_by_carlbert_d4f8ej9-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3siaGVpZ2h0IjoiPD05NjAiLCJwYXRoIjoiXC9mXC82Y2IzYTkxMC1hM2FmLTRkNWEtOGE2NS1mNWYyYzA2NzI1NzNcL2Q0ZjhlajktMDQ4NzllNmEtYmJjOS00Y2M2LTgzNjQtNmVkZmUxYTQxNDNjLmpwZyIsIndpZHRoIjoiPD0xMjgwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.N_BheyPikOSHH-5nferIoz2QVYJkbDvIxURkiu12LDU"); */
   height: 100vh;
   display: grid;
-  grid-template-rows: 50px 1fr;
+  grid-template-rows: 50px 1fr auto;
   grid-template-areas:
     "nav"
-    "main";
+    "main"
+    "footer";
 }
 
 /* header */
@@ -210,4 +211,44 @@ img {
 .myInfo {
   text-align: justify;
   max-width: 300px;
+}
+/* footer */
+footer {
+  grid-area: footer;
+  /* background-color: #b8c0c2; */
+  background-color: #8fcfd1;
+  opacity: 0.8;
+  /* display: flex; */
+  text-align: center;
+  color: black;
+  padding: 0 20px 0 30px;
+}
+.footerGithub,
+.footerLinkedin {
+  display: inline;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+.teamsLinksP,
+.teamsLinks {
+  font-size: 12px;
+  max-width: 950px;
+  color: black;
+}
+.myFooter a {
+  color: black;
+}
+
+.teamsLinks a {
+  color: black;
+}
+.teamsLinks {
+  /* display: flex; */
+  /* justify-content: space-between; */
+  margin-right: 20px;
+  margin-left: 20px;
+}
+.gitHubIcon,
+.linkdInIcon {
+  width: 24px;
 }

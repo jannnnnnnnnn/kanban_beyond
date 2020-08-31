@@ -217,6 +217,10 @@ input:checked + .slider:before {
 .tooltipText2 {
   bottom: 10px;
 }
+.tooltipText3 {
+  right: 50px;
+  top: 20px;
+}
 .tooltipHelp:hover .tooltipText {
   visibility: visible;
   /* display: block; */
