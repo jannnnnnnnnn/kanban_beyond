@@ -250,7 +250,7 @@ input:checked + .slider:before {
 
 .taskText {
   min-width: 140px;
-  border: 1px dotted grey;
+  border: 1px dashed grey;
   display: inline;
 }
 
@@ -292,3 +292,10 @@ input:checked + .slider:before {
 .newListBtn {
   width: 100px;
 }
+
+.bgCard {
+  /* background-color: #f6efa6; */
+  background-color: #ecedd6;
+}
+
+/* #df5e88 */

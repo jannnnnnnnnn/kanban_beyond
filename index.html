@@ -79,6 +79,7 @@
           and paste it in the input section, submit it, and see the magic</span
         >
       </div>
+
         <div>
           <a class="right-right" href="#"> &nbsp;&nbsp;&nbsp;Help</a>
           <label class="switch">
@@ -97,7 +98,7 @@
             <div class="titleBoard addBorder">
               <div></div>
               <h5 class="help title" ondblclick="ShowElement(this)">
-                To do:
+                To do
                 <span class="tooltipText"
                   >Double click and you can change the title. Single click and
                   you can drag the board</span
@@ -144,10 +145,10 @@
                   </h5>
                 </div>
                 <div id="collapseOne" class="collapse">
-                  <div class="card-body">
+                  <div class="card-body bgCard">
                     <label>Detailed info:</label>
-                    <p ondblclick="ShowElement(this)">Enter Description</p>
-                    <button onclick="deleteTask(this)">Delete</button>
+                    <p class="taskText" ondblclick="ShowElement(this)">Enter Description</p>
+                    <button class="btn btn-outline-danger" onclick="deleteTask(this)">Delete Task</button>
                   </div>
                 </div>
               </div>
@@ -171,7 +172,7 @@
             <div class="titleBoard addBorder">
               <div></div>
               <h5 class="help title" ondblclick="ShowElement(this.innerText)">
-                In progress:
+                In progress
                 <span class="tooltipText"
                   >Double click and you can change the title. Single click and
                   you can drag the board</span
@@ -214,10 +215,10 @@
                   </h5>
                 </div>
                 <div id="collapseTwo" class="collapse">
-                  <div class="card-body">
+                  <div class="card-body bgCard">
                     <label>Detailed info:</label>
-                    <p ondblclick="ShowElement(this)">Enter Description</p>
-                    <button onclick="deleteTask(this)">Delete</button>
+                    <p class="taskText" ondblclick="ShowElement(this)">Enter Description</p>
+                    <button class="btn btn-outline-danger" onclick="deleteTask(this)">Delete Task</button>
                   </div>
                 </div>
               </div>
@@ -241,7 +242,7 @@
             <div class="titleBoard addBorder">
               <div></div>
               <h5 class="help title" ondblclick="ShowElement(this.innerText)">
-                Done:
+                Done
 
                 <span class="tooltipText"
                   >Double click and you can change the title. Single click and
@@ -284,10 +285,10 @@
                   </h5>
                 </div>
                 <div id="collapseThree" class="collapse">
-                  <div class="card-body">
+                  <div class="card-body bgCard">
                     <label>Detailed info:</label>
-                    <p ondblclick="ShowElement(this)">Enter Description</p>
-                    <button onclick="deleteTask(this)">Delete</button>
+                    <p class="taskText" ondblclick="ShowElement(this)">Enter Description</p>
+                    <button class="btn btn-outline-danger" onclick="deleteTask(this)">Delete Task</button>
                   </div>
                 </div>
               </div>
@@ -313,35 +314,15 @@
           id="addBoardBtn"
           onclick="addBoard()"
         >
-
-
-
-          <span>New List +</span>
-          <span class="tooltipText"
-            >when you click on "New List" you will create a new list/board, and
-            after ward you can move it around, with dragging and dropping</span
-          >
+        <span>New List +</span>
+        <span class="tooltipText"
+          >when you click on "New List" you will create a new list/board, and
+          after ward you can move it around, with dragging and dropping</span
+        >
         </button>
       </section>
 
-      <!-- <input
-        type="text"
-        id="bgchanger"
-        class="backgroundBtn"
-        placeholder="Add URL To Change Background "
-      />
-      <div class="backgroundBtn help">
-        <input
-          class="backgroundBtn"
-          type="button"
-          onclick="changebackground();"
-          value="Change your background"
-        />
-        <span class="tooltipText tooltipText2"
-          >if you don't like the background, get the URL of the picture you like
-          and paste it in the input section, submit it, and see the magic</span
-        >
-      </div> -->
+
     </main>
   </body>
 </html>
