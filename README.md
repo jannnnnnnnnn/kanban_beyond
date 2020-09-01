@@ -2,7 +2,7 @@
 
 ---
 
-[_Link to KanBan Board APP_]()
+[_Link to KanBan Board APP_](https://jannnnnnnnnn.github.io/kanban_beyond/)
 
 ## Description
 
@@ -40,7 +40,8 @@ Kanban Board and Beyond is a front-end only Web Application. It is a tool for wo
 
 > **_Inital Loading Page_**
 
-![Inital Loading Screen]()
+![Inital Loading Screen](https://i.imgur.com/Q8O6jig.png)
+![Kanban Board Screen](https://i.imgur.com/6F0EEN7.png)
 
 ## Future Enhancements
 
